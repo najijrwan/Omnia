@@ -207,7 +207,7 @@ export default function Navbar() {
       <nav className="relative bg-main px-4 py-3 flex items-center justify-center text-white z-10">
         <Link to="/" className="font-bold text-xl absolute left-0 flex justify-start items-center">
           <img src="/Omnia.png" alt="Omnia" className='size-12' />
-          <p>mnia</p>
+          <i className=''>mnia</i>
         </Link>
         <div className="flex justify-end items-center gap-4 w-full">
           <button onClick={() => setSearchOpen(!searchOpen)}>
@@ -226,7 +226,7 @@ export default function Navbar() {
             </svg>
             <input type="text" onClick={(e) => e.stopPropagation()}
               placeholder='What do you wish to find ?'
-              className={`fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-main w-[80vw] h-8 rounded-lg  focus:outline-amber-50 focus:outline-1 pl-2 placeholder-white border border-black z-10 
+              className={`fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-main w-[80vw] h-10 rounded-lg  focus:outline-amber-50 focus:outline-1 pl-2 placeholder-white focus:placeholder-transparent border border-black z-10 
               ${searchOpen ? 'block' : 'hidden'}`} />
           </button>
           <button>
