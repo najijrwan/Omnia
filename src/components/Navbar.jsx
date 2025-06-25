@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
 
   const [activeCategory, setActiveCategory] = useState(null);
 
@@ -203,10 +204,13 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="relative bg-[#84C7D0] px-4 py-3 flex items-center justify-center text-[#343330] z-10">
-        <Link to="/" className="font-bold text-xl absolute left-5">Omnia</Link>
+      <nav className="relative bg-main px-4 py-3 flex items-center justify-center text-white z-10">
+        <Link to="/" className="font-bold text-xl absolute left-0 flex justify-start items-center">
+          <img src="/Omnia.png" alt="Omnia" className='size-12' />
+          <p>mnia</p>
+        </Link>
         <div className="flex justify-end items-center gap-4 w-full">
-          <button>
+          <button onClick={() => setSearchOpen(!searchOpen)}>
             <svg xmlns="http://www.w3.org/2000/svg"
               width="25"
               height="25"
@@ -220,6 +224,10 @@ export default function Navbar() {
               <path d="m21 21-4.34-4.34" />
               <circle cx="11" cy="11" r="8" />
             </svg>
+            <input type="text" onClick={(e) => e.stopPropagation()}
+              placeholder='What do you wish to find ?'
+              className={`fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-main w-[80vw] h-8 rounded-lg  focus:outline-amber-50 focus:outline-1 pl-2 placeholder-white border border-black z-10 
+              ${searchOpen ? 'block' : 'hidden'}`} />
           </button>
           <button>
             <svg xmlns="http://www.w3.org/2000/svg"
@@ -250,6 +258,23 @@ export default function Navbar() {
               <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
             </svg>
           </button>
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-circle-user-round-icon lucide-circle-user-round text-white">
+              <path d="M18 20a6 6 0 0 0-12 0" />
+              <circle cx="12" cy="10" r="4" />
+              <circle cx="12" cy="12" r="10" />
+            </svg>
+          </button>
           <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
             <svg xmlns="http://www.w3.org/2000/svg"
               width="25"
@@ -269,13 +294,23 @@ export default function Navbar() {
         </div>
       </nav>
 
-      <div
-        onClick={() => setMenuOpen(!menuOpen)}
-        className={`fixed top-0 h-full w-full bg-black opacity-30 z-20 ${menuOpen ? 'block' : 'hidden'}`}></div>
+      {/* Single overlay */}
+      {(menuOpen || searchOpen) && (
+        <div
+          className={`fixed top-0 h-full w-full bg-black opacity-30 -z-10 ${searchOpen ? 'opacity-60' : 'opacity-30'}`}
+          onClick={() => {
+            if (menuOpen) setMenuOpen(false);
+            if (searchOpen) setSearchOpen(false);
+          }}
+        />
+      )}
+
+
+      {/* Sidebar */}
       <div
         className={`
-          fixed top-0 right-0 h-full w-[70vw] bg-[#75DDDD] 
-          transition-all duration-300 ease-in-out z-30
+          fixed top-0 right-0 h-full w-[70vw] bg-[#343330] text-white
+          transition-all duration-300 ease-in-out z-30 overflow-y-scroll
           ${menuOpen ? 'translate-x-0' : 'translate-x-full'}
         `}
       >
@@ -296,14 +331,10 @@ export default function Navbar() {
             <path d="m6 6 12 12" />
           </svg>
         </button>
-        <div>
-          <ul className="flex flex-col p-4 gap-4">
-            <li><Link to="/registration">Sign Up</Link></li>
-          </ul>
-        </div>
-        <div className="m-auto w-[70%] h-px bg-black"></div>
-        <div>
-          <ul className="flex flex-col p-4 gap-4">
+
+
+        <div className=''>
+          <ul className="flex flex-col p-4 gap-4 mt-6">
             {categories.map((category) => (
               <li key={category.title}>
                 {/* Main Category Button */}
@@ -333,10 +364,10 @@ export default function Navbar() {
                   <div className="mt-2 pl-4 flex flex-col gap-3">
                     {category.subcategories.map((sub) => (
                       <div key={sub.title}>
-                        <p className="font-medium text-gray-700">{sub.title}</p>
-                        <ul className="list-disc pl-5 text-gray-600">
+                        <p className="font-[300] text-white">{sub.title}</p>
+                        <ul className="list-disc pl-5 text-gray-300">
                           {sub.items.map((item) => (
-                            <li key={item}>{item}</li>
+                            <li key={item} className='underline'>{item}</li>
                           ))}
                         </ul>
                       </div>
