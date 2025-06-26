@@ -204,13 +204,17 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="relative bg-main px-4 py-3 flex items-center justify-center text-white z-10">
-        <Link to="/" className="font-bold text-xl absolute left-0 flex justify-start items-center">
-          <img src="/Omnia.png" alt="Omnia" className='size-12' />
-          <i className=''>mnia</i>
-        </Link>
-        <div className="flex justify-end items-center gap-4 w-full">
-          <button onClick={() => setSearchOpen(!searchOpen)}>
+      <nav className="relative bg-main px-4 py-3 flex items-center sm:justify-around sm:gap-10 text-white z-10">
+        <div className='mr-10'>
+          <Link to="/" className="font-bold text-xl flex justify-start items-center">
+            <img src="/Omnia.png" alt="Omnia" className='size-12' />
+            <p className='absolute left-13'><i>mnia</i></p>
+          </Link>
+        </div>
+        <div className='hidden sm:flex sm:flex-grow'>
+          <button
+            onClick={() => setSearchOpen(!searchOpen)}
+            className='sm:relative sm:w-full'>
             <svg xmlns="http://www.w3.org/2000/svg"
               width="25"
               height="25"
@@ -220,13 +224,40 @@ export default function Navbar() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="lucide lucide-search-icon lucide-search text-white">
+              className="lucide lucide-search-icon lucide-search text-white sm:absolute sm:left-0 sm:top-1.5 sm:ml-2 sm:text-black sm:z-20 ">
               <path d="m21 21-4.34-4.34" />
               <circle cx="11" cy="11" r="8" />
             </svg>
             <input type="text" onClick={(e) => e.stopPropagation()}
               placeholder='What do you wish to find ?'
-              className={`fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-main w-[80vw] h-10 rounded-lg  focus:outline-amber-50 focus:outline-1 pl-2 placeholder-white focus:placeholder-transparent border border-black z-10 
+              className={`fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-main w-[80vw] h-10 rounded-lg focus:outline-amber-50 focus:outline-1 pl-2 
+                placeholder-white focus:placeholder-transparent border border-black z-10 
+                sm:block sm:static sm:translate-0 sm:mr-5 sm:bg-white sm:text-black sm:placeholder-black sm:z-10 sm:px-10 sm:w-full
+              ${searchOpen ? 'block' : 'hidden'}`} />
+          </button>
+        </div>
+        <div className="flex justify-end items-center gap-4 ml-auto sm:ml-0">
+          <button
+            onClick={() => setSearchOpen(!searchOpen)}
+            className='sm:hidden'>
+            <svg xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="lucide lucide-search-icon lucide-search text-white sm:absolute sm:left-0 sm:top-1.5 sm:ml-2 sm:text-black sm:z-20 ">
+              <path d="m21 21-4.34-4.34" />
+              <circle cx="11" cy="11" r="8" />
+            </svg>
+            <input type="text" onClick={(e) => e.stopPropagation()}
+              placeholder='What do you wish to find ?'
+              className={`fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-main w-[80vw] h-10 rounded-lg focus:outline-amber-50 focus:outline-1 pl-2 
+                placeholder-white focus:placeholder-transparent border border-black z-10 
+                sm:block sm:static sm:translate-0 sm:mr-5 sm:bg-white sm:text-black sm:placeholder-black sm:z-10 sm:px-10 sm:w-full
               ${searchOpen ? 'block' : 'hidden'}`} />
           </button>
           <button>
@@ -380,9 +411,6 @@ export default function Navbar() {
 
         </div>
       </div>
-
-      <nav className="hidden bg-[#75DDDD] text-white md:flex justify-center items-center gap-5 py-2">
-      </nav>
     </>
   );
 }
