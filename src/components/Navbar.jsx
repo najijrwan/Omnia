@@ -204,36 +204,36 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="relative bg-main px-4 py-3 flex items-center sm:justify-around sm:gap-10 text-white z-10">
-        <div className='mr-10'>
-          <Link to="/" className="font-bold text-xl flex justify-start items-center">
-            <img src="/Omnia.png" alt="Omnia" className='size-12' />
-            <p className='absolute left-13'><i>mnia</i></p>
-          </Link>
+      <nav className="bg-main px-4 py-3 flex items-center sm:justify-around sm:gap-10 text-white z-10">
+        <div className='relative mr-15 md:mr-6 flex'>
+          <img src="/Omnia.png" alt="Omnia" className='size-12 block  top-0 left-0' />
+          <Link to="/" className="font-bold text-xl flex justify-start items-center"><i>Omnia</i></Link>
         </div>
-        <div className='hidden sm:flex sm:flex-grow'>
-          <button
-            onClick={() => setSearchOpen(!searchOpen)}
-            className='sm:relative sm:w-full'>
-            <svg xmlns="http://www.w3.org/2000/svg"
-              width="25"
-              height="25"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-search-icon lucide-search text-white sm:absolute sm:left-0 sm:top-1.5 sm:ml-2 sm:text-black sm:z-20 ">
-              <path d="m21 21-4.34-4.34" />
-              <circle cx="11" cy="11" r="8" />
-            </svg>
-            <input type="text" onClick={(e) => e.stopPropagation()}
-              placeholder='What do you wish to find ?'
-              className={`fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-main w-[80vw] h-10 rounded-lg focus:outline-amber-50 focus:outline-1 pl-2 
-                placeholder-white focus:placeholder-transparent border border-black z-10 
-                sm:block sm:static sm:translate-0 sm:mr-5 sm:bg-white sm:text-black sm:placeholder-black sm:z-10 sm:px-10 sm:w-full
-              ${searchOpen ? 'block' : 'hidden'}`} />
+        <div className={`
+              fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-main w-[80vw] h-10 rounded-lg flex flex-grow z-10
+              sm:block sm:static sm:top-0 sm:right-0 sm:translate-0 sm:w-full
+              ${searchOpen ? 'block' : 'hidden'}`}>
+          <input
+            type="text" onClick={(e) => e.stopPropagation()}
+            placeholder='What do you wish to find ?'
+            className='
+              w-full h-10 focus:outline-amber-50 focus:outline-1 pl-10 rounded-[inherit] focus:placeholder-transparent border border-white outline-transparent
+              sm:bg-white sm:text-black sm:placeholder-black sm:border-black sm:border sm:focus:outline-black' />
+          <svg xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="lucide lucide-search-icon lucide-search text-white absolute top-1.5 left-1.5 sm:text-black">
+            <path d="m21 21-4.34-4.34" />
+            <circle cx="11" cy="11" r="8" />
+          </svg>
+          <button className='text-black bg-white absolute right-0 h-full px-5 rounded-tr-[inherit] rounded-br-[inherit] sm:hidden'>
+            Find
           </button>
         </div>
         <div className="flex justify-end items-center gap-4 ml-auto sm:ml-0">
@@ -249,16 +249,10 @@ export default function Navbar() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="lucide lucide-search-icon lucide-search text-white sm:absolute sm:left-0 sm:top-1.5 sm:ml-2 sm:text-black sm:z-20 ">
+              className="lucide lucide-search-icon lucide-search text-white sm:absolute sm:left-0 sm:top-1.5 sm:ml-2 sm:text-black">
               <path d="m21 21-4.34-4.34" />
               <circle cx="11" cy="11" r="8" />
             </svg>
-            <input type="text" onClick={(e) => e.stopPropagation()}
-              placeholder='What do you wish to find ?'
-              className={`fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-main w-[80vw] h-10 rounded-lg focus:outline-amber-50 focus:outline-1 pl-2 
-                placeholder-white focus:placeholder-transparent border border-black z-10 
-                sm:block sm:static sm:translate-0 sm:mr-5 sm:bg-white sm:text-black sm:placeholder-black sm:z-10 sm:px-10 sm:w-full
-              ${searchOpen ? 'block' : 'hidden'}`} />
           </button>
           <button>
             <svg xmlns="http://www.w3.org/2000/svg"
@@ -328,7 +322,7 @@ export default function Navbar() {
       {/* Single overlay */}
       {(menuOpen || searchOpen) && (
         <div
-          className={`fixed top-0 h-full w-full bg-black opacity-30 -z-10 ${searchOpen ? 'opacity-60' : 'opacity-30'}`}
+          className={`fixed top-0 h-full w-full bg-black opacity-30 ${searchOpen ? 'opacity-70' : 'opacity-50 z-10'}`}
           onClick={() => {
             if (menuOpen) setMenuOpen(false);
             if (searchOpen) setSearchOpen(false);
