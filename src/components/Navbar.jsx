@@ -16,7 +16,7 @@ export default function Navbar() {
 
   const scroll = (direction) => {
     if (!scrollRef.current) return;
-    const scrollAmount = 150;
+    const scrollAmount = 1000;
     scrollRef.current.scrollBy({
       left: direction === 'left' ? -scrollAmount : scrollAmount,
       behavior: 'smooth'
@@ -335,9 +335,9 @@ export default function Navbar() {
         {/* Left Scroll Button */}
         <button
           onClick={() => scroll('left')}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gradient-to-r from-main to-transparent px-2 h-full"
+          className="absolute left-0 top-1/2 -translate-y-1/2 bg-gradient-to-r from-base-1 to-transparent px-2 h-full"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
             <path d="M15 18l-6-6 6-6" />
           </svg>
         </button>
@@ -345,9 +345,9 @@ export default function Navbar() {
         {/* Right Scroll Button */}
         <button
           onClick={() => scroll('right')}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gradient-to-l from-main to-transparent px-2 h-full"
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gradient-to-l from-base-1 to-transparent px-2 h-full"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
             <path d="M9 18l6-6-6-6" />
           </svg>
         </button>
@@ -355,7 +355,7 @@ export default function Navbar() {
         {/* Scrollable Nav */}
         <nav
           ref={scrollRef}
-          className="flex overflow-x-auto whitespace-nowrap scrollbar-hide scroll-smooth"
+          className="flex overflow-x-auto whitespace-nowrap hide-scrollbar scroll-smooth mx-9"
         >
           {categories.map((category) => (
             <button

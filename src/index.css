@@ -1,13 +1,26 @@
 @import "tailwindcss";
 
-body{
+body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   background-color: var(--color-main);
 }
 
-@theme{
-  --color-main: #FCD8B4; 
+@theme {
+  --color-main: #FCD8B4;
   --color-secondary: #343330;
   --color-base-1: #F87060;
   --color-base-2: #AA8F76;
+}
+
+/* Hides scrollbar in WebKit-based browsers (Chrome, Safari, Edge) */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hides scrollbar in Firefox */
+.hide-scrollbar {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
 }
