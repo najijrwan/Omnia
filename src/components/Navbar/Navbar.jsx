@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-secondary px-4 py-3 flex items-center sm:justify-around sm:gap-10 text-white z-10">
+      <header className="bg-secondary px-4 py-3 flex items-center sm:justify-around sm:gap-10 text-white z-10">
         <div className="flex items-center gap-5">
           <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
             {/* menu icon svg */}
@@ -46,11 +46,11 @@ export default function Navbar() {
             <CircleUserRound className="text-base-1" />
           </button>
         </div>
-      </nav>
+      </header>
 
-      <div>
+      <nav className="hidden md:block ">
         <CategoriesWithDetails categories={categories} />
-      </div>
+      </nav>
 
       {(menuOpen || searchOpen) && (
         <div className="fixed top-0 left-0 w-full h-full bg-black z-10 opacity-50" onClick={() => {

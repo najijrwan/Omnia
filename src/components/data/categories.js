@@ -22,6 +22,26 @@ export const categories = [
             {
                 title: "Footwear",
                 items: ["Casual Shoes", "Formal Shoes", "Sneakers", "Sandals"]
+            },
+            {
+                title: "Devices",
+                items: ["Smartphones", "Laptops", "Tablets", "Desktops"]
+            },
+            {
+                title: "Accessories",
+                items: ["Chargers", "Headphones", "Cases", "Cables"]
+            },
+            {
+                title: "Makeup",
+                items: ["Foundation", "Lipstick", "Mascara", "Blush"]
+            },
+            {
+                title: "Skincare",
+                items: ["Moisturizers", "Cleansers", "Serums", "Sunscreens"]
+            },
+            {
+                title: "Fragrance",
+                items: ["Perfume", "Cologne", "Body Mist", "Essential Oils"]
             }
         ]
     },

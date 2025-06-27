@@ -11,7 +11,7 @@ export default function CategoryScroller({ categories, onHoverCategory }) {
     };
 
     return (
-        <div className="relative hidden md:block bg-main border-b border-b-secondary/30">
+        <header className="relative hidden md:block bg-main border-b border-b-secondary/30">
             <button onClick={() => scroll('left')} className="absolute left-0 top-1/2 -translate-y-1/2 bg-gradient-to-r from-base-1 to-transparent px-2 h-full">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="3"><path d="M15 18l-6-6 6-6" /></svg>
             </button>
@@ -32,14 +32,6 @@ export default function CategoryScroller({ categories, onHoverCategory }) {
                     </button>
                 ))}
             </nav>
-            <div>
-                <main>
-
-                </main>
-                <div>
-
-                </div>
-            </div>
-        </div>
+        </header>
     );
 }
