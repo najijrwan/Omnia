@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,6 +12,16 @@ export default function Navbar() {
     setActiveCategory((prev) => (prev === title ? null : title));
   };
 
+  const scrollRef = useRef();
+
+  const scroll = (direction) => {
+    if (!scrollRef.current) return;
+    const scrollAmount = 150;
+    scrollRef.current.scrollBy({
+      left: direction === 'left' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth'
+    });
+  };
 
   const categories = [
     {
@@ -204,10 +215,10 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-main px-4 py-3 flex items-center sm:justify-around sm:gap-10 text-white z-10">
+      <nav className="bg-secondary px-4 py-3 flex items-center sm:justify-around sm:gap-10 text-white z-10">
         <div className='relative mr-15 md:mr-6 flex'>
           <img src="/Omnia.png" alt="Omnia" className='size-12 block  top-0 left-0' />
-          <Link to="/" className="font-bold text-xl flex justify-start items-center"><i>Omnia</i></Link>
+          <Link to="/" className="font-bold text-xl flex justify-start items-center text-base-1"><i>Omnia</i></Link>
         </div>
         <div className={`
               fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-main w-[80vw] h-10 rounded-lg flex flex-grow z-10
@@ -217,8 +228,8 @@ export default function Navbar() {
             type="text" onClick={(e) => e.stopPropagation()}
             placeholder='What do you wish to find ?'
             className='
-              w-full h-10 focus:outline-amber-50 focus:outline-1 pl-10 rounded-[inherit] focus:placeholder-transparent border border-white outline-transparent
-              sm:bg-white sm:text-black sm:placeholder-black sm:border-black sm:border sm:focus:outline-black' />
+              w-full h-10 focus:outline-amber-50 focus:outline-1 pl-10 rounded-[inherit] focus:placeholder-transparent border border-base-1 outline-transparent bg-secondary
+              sm:bg-main sm:text-black sm:placeholder-black sm:border-black sm:border sm:focus:outline-black' />
           <svg xmlns="http://www.w3.org/2000/svg"
             width="25"
             height="25"
@@ -228,11 +239,11 @@ export default function Navbar() {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="lucide lucide-search-icon lucide-search text-white absolute top-1.5 left-1.5 sm:text-black">
+            className="lucide lucide-search-icon lucide-search text-base-1 sm:text-base-1 absolute top-1.5 left-1.5">
             <path d="m21 21-4.34-4.34" />
             <circle cx="11" cy="11" r="8" />
           </svg>
-          <button className='text-black bg-white absolute right-0 h-full px-5 rounded-tr-[inherit] rounded-br-[inherit] sm:hidden'>
+          <button className='text-secondary bg-base-1 absolute right-0 h-full px-5 rounded-tr-[inherit] rounded-br-[inherit] sm:hidden'>
             Find
           </button>
         </div>
@@ -249,7 +260,7 @@ export default function Navbar() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="lucide lucide-search-icon lucide-search text-white sm:absolute sm:left-0 sm:top-1.5 sm:ml-2 sm:text-black">
+              className="lucide lucide-search-icon lucide-search text-base-1 sm:absolute sm:left-0 sm:top-1.5 sm:ml-2">
               <path d="m21 21-4.34-4.34" />
               <circle cx="11" cy="11" r="8" />
             </svg>
@@ -263,7 +274,7 @@ export default function Navbar() {
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              className="lucide lucide-shopping-cart-icon lucide-shopping-cart text-white">
+              className="lucide lucide-shopping-cart-icon lucide-shopping-cart text-base-1">
               <circle cx="8" cy="21" r="1" />
               <circle cx="19" cy="21" r="1" />
               <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
@@ -279,7 +290,7 @@ export default function Navbar() {
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              className="lucide lucide-heart-icon lucide-heart text-white">
+              className="lucide lucide-heart-icon lucide-heart text-base-1">
               <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
             </svg>
           </button>
@@ -294,7 +305,7 @@ export default function Navbar() {
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-circle-user-round-icon lucide-circle-user-round text-white">
+              class="lucide lucide-circle-user-round-icon lucide-circle-user-round text-base-1">
               <path d="M18 20a6 6 0 0 0-12 0" />
               <circle cx="12" cy="10" r="4" />
               <circle cx="12" cy="12" r="10" />
@@ -310,7 +321,7 @@ export default function Navbar() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="lucide lucide-menu-icon lucide-menu text-white">
+              className="lucide lucide-menu-icon lucide-menu text-base-1">
               <path d="M4 12h16" />
               <path d="M4 18h16" />
               <path d="M4 6h16" />
@@ -318,6 +329,44 @@ export default function Navbar() {
           </button>
         </div>
       </nav>
+
+      {/* Scrollable Nav Container */}
+      <div className="relative hidden md:block bg-main border-b border-b-secondary/30">
+        {/* Left Scroll Button */}
+        <button
+          onClick={() => scroll('left')}
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gradient-to-r from-main to-transparent px-2 h-full"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+
+        {/* Right Scroll Button */}
+        <button
+          onClick={() => scroll('right')}
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gradient-to-l from-main to-transparent px-2 h-full"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
+
+        {/* Scrollable Nav */}
+        <nav
+          ref={scrollRef}
+          className="flex overflow-x-auto whitespace-nowrap scrollbar-hide scroll-smooth"
+        >
+          {categories.map((category) => (
+            <button
+              key={category.title}
+              className="text-sm font-bold border-b-[4px] border-transparent hover:border-b-base-1 hover:text-secondary transition h-full py-2 px-4 whitespace-nowrap"
+            >
+              {category.title}
+            </button>
+          ))}
+        </nav>
+      </div>
 
       {/* Single overlay */}
       {(menuOpen || searchOpen) && (
@@ -334,7 +383,7 @@ export default function Navbar() {
       {/* Sidebar */}
       <div
         className={`
-          fixed top-0 right-0 h-full w-[70vw] bg-[#343330] text-white
+          fixed top-0 right-0 h-full w-[70vw] bg-secondary
           transition-all duration-300 ease-in-out z-30 overflow-y-scroll
           ${menuOpen ? 'translate-x-0' : 'translate-x-full'}
         `}
@@ -351,12 +400,11 @@ export default function Navbar() {
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            className="lucide lucide-x-icon lucide-x text-white">
+            className="lucide lucide-x-icon lucide-x text-base-1">
             <path d="M18 6 6 18" />
             <path d="m6 6 12 12" />
           </svg>
         </button>
-
 
         <div className=''>
           <ul className="flex flex-col p-4 gap-4 mt-6">
@@ -367,7 +415,7 @@ export default function Navbar() {
                   className="flex w-full items-center justify-between"
                   onClick={() => handleClick(category.title)}
                 >
-                  <p className="font-semibold">{category.title}</p>
+                  <p className="font-semibold text-base-1">{category.title}</p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -378,7 +426,7 @@ export default function Navbar() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className={`transition-transform ${activeCategory === category.title ? "rotate-180" : ""}`}
+                    className={`transition-transform text-base-1 ${activeCategory === category.title ? "rotate-180 text-base-2" : ""}`}
                   >
                     <path d="m6 9 6 6 6-6" />
                   </svg>
@@ -389,8 +437,8 @@ export default function Navbar() {
                   <div className="mt-2 pl-4 flex flex-col gap-3">
                     {category.subcategories.map((sub) => (
                       <div key={sub.title}>
-                        <p className="font-[300] text-white">{sub.title}</p>
-                        <ul className="list-disc pl-5 text-gray-300">
+                        <p className="font-[300] text-main">{sub.title}</p>
+                        <ul className="list-disc pl-5 text-base-2">
                           {sub.items.map((item) => (
                             <li key={item} className='underline'>{item}</li>
                           ))}

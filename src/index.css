@@ -2,8 +2,12 @@
 
 body{
   font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: var(--color-main);
 }
 
 @theme{
-  --color-main: #343330;
+  --color-main: #FCD8B4; 
+  --color-secondary: #343330;
+  --color-base-1: #F87060;
+  --color-base-2: #AA8F76;
 }
