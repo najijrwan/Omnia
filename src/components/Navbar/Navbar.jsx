@@ -50,7 +50,7 @@ export default function Navbar() {
       <CategoriesWithDetails categories={categories} />
 
       {(menuOpen || searchOpen) && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black z-10 opacity-50" onClick={() => {
+        <div className="fixed top-0 left-0 w-full h-full bg-white/10 z-10 backdrop-blur-[6px]" onClick={() => {
           setMenuOpen(false);
           setSearchOpen(false);
         }} />
