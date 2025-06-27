@@ -1,9 +1,8 @@
 //Navbar.jsx
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { categories } from "../data/categories";
+import { categories } from "../../data/categories";
 import SearchBar from "./SearchBar";
-import CategoryScroller from "./CategoryScroller";
 import Sidebar from "./Sidebar";
 import CategoriesWithDetails from './CategoriesWithDetails';
 
@@ -48,9 +47,7 @@ export default function Navbar() {
         </div>
       </header>
 
-      <nav className="hidden md:block ">
-        <CategoriesWithDetails categories={categories} />
-      </nav>
+      <CategoriesWithDetails categories={categories} />
 
       {(menuOpen || searchOpen) && (
         <div className="fixed top-0 left-0 w-full h-full bg-black z-10 opacity-50" onClick={() => {
