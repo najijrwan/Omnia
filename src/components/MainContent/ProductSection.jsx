@@ -1,6 +1,6 @@
 // PorductSection.jsx
 import ProductCard from './ProductCard';
-import { products } from '../../data/products';
+import { products } from '../../data/mainContent/products';
 
 export default function ProductSection({ title }) {
   return (

@@ -1,4 +1,4 @@
-import { products } from "../../data/products";
+import { products } from "../../data/mainContent/products";
 import ProductCard from "./ProductCard";
 
 export default function HorizontalProductScroller({ title = "Recommended for You" }) {

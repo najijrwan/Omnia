@@ -1,7 +1,7 @@
 //Navbar.jsx
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { categories } from "../../data/categories";
+import { categories } from "../../data/navBar/categories";
 import SearchBar from "./SearchBar";
 import Sidebar from "./Sidebar";
 import CategoriesWithDetails from './CategoriesWithDetails';

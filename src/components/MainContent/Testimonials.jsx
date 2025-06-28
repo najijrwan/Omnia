@@ -1,4 +1,4 @@
-import { testimonials } from "../../data/testimonials";
+import { testimonials } from "../../data/mainContent/testimonials";
 export default function Testimonials() {
     return (
         <section className="px-4 py-12 bg-white text-center">
