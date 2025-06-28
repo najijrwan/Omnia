@@ -2,8 +2,8 @@ import { useState } from 'react';
 import CategoryScroller from './CategoryScroller';
 
 export default function CategoriesWithDetails({ categories }) {
-    const [hoveredCategory, setHoveredCategory] = useState(null);
-    const [lockDisplay, setLockDisplay] = useState(false); // control to persist main on hover
+    const [hoveredCategory, setHoveredCategory] = useState("Electronics"); // default category
+    const [lockDisplay, setLockDisplay] = useState(true); // control to persist main on hover
 
     const currentCategory = categories.find(cat => cat.title === hoveredCategory);
 
@@ -42,6 +42,9 @@ export default function CategoriesWithDetails({ categories }) {
                             </ul>
                         </section>
                     ))}
+                    <div>
+                        <img src="/Images/electronics.png" alt="Electronics" />
+                    </div>
                 </main>
             )}
         </nav>

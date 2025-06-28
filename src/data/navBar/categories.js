@@ -1,14 +1,32 @@
 export const categories = [
     {
         title: "Electronics",
+        image: "/Images/electronics.png",
+        description: "Explore the latest in electronics, from smartphones to smartwatches.",
         subcategories: [
             {
-                title: "Devices",
-                items: ["Smartphones", "Laptops", "Tablets", "Desktops"]
+                title: "Mobile & Tablet Devices",
+                items: ["Samsung", "iPhone", "Xiaomi", "Lenovo", "Redmi", "Oppo", "Vivo", "Realme", "OnePlus", "Google Pixel"]
+            },
+            {
+                title: "Smartwatches & Wearables",
+                items: ["Apple Watch", "Samsung Galaxy Watch", "Fitbit", "Garmin", "Amazfit", "Huawei Watch", "Xiaomi Mi Band", "Fossil Hybrid HR"]
+            },
+            {
+                title: "Laptops & Desktops",
+                items: ["Dell", "HP", "Lenovo", "Apple MacBook", "Asus", "Acer", "Microsoft Surface", "Razer"]
             },
             {
                 title: "Accessories",
-                items: ["Chargers", "Headphones", "Cases", "Cables"]
+                items: ["Chargers", "Cables", "Cases", "Screen Protectors", "Power Banks", "Mice", "Keyboards", "Webcams", "Speakers", "Mousepads", "USB Hubs", ]
+            },
+            {
+                title: "Audio & Headphones",
+                items: ["Over-Ear Headphones", "In-Ear Earbuds", "Bluetooth Speakers", "Soundbars", "Home Theater Systems", "Noise-Canceling Headphones"]
+            },
+            {
+                title: "Cameras & Photography",
+                items: ["DSLR Cameras", "Mirrorless Cameras", "Action Cameras", "Tripods", "Camera Lenses", "Camera Bags"]
             }
         ]
     },
