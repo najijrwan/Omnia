@@ -1,6 +1,6 @@
 export default function Hero() {
     return (
-        <section className="w-full bg-gradient-to-r from-base-1 via-secondary to-base-2 text-white py-16 px-8 flex flex-col items-center text-center rounded-lg shadow-lg">
+        <section className="w-full bg-gradient-to-b from-base-1 to-base-2 text-white py-16 px-8 flex flex-col items-center text-center rounded-lg shadow-lg">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
                 Welcome to DemoShop
             </h1>
