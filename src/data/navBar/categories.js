@@ -18,7 +18,7 @@ export const categories = [
             },
             {
                 title: "Accessories",
-                items: ["Chargers", "Cables", "Cases", "Screen Protectors", "Power Banks", "Mice", "Keyboards", "Webcams", "Speakers", "Mousepads", "USB Hubs", ]
+                items: ["Chargers", "Cables", "Cases", "Screen Protectors", "Power Banks", "Mice", "Keyboards", "Webcams", "Speakers", "Mousepads", "USB Hubs",]
             },
             {
                 title: "Audio & Headphones",
@@ -26,6 +26,9 @@ export const categories = [
             },
             {
                 title: "Cameras & Photography",
+                items: ["DSLR Cameras", "Mirrorless Cameras", "Action Cameras", "Tripods", "Camera Lenses", "Camera Bags"]
+            }, {
+                title: "demo",
                 items: ["DSLR Cameras", "Mirrorless Cameras", "Action Cameras", "Tripods", "Camera Lenses", "Camera Bags"]
             }
         ]
