@@ -21,7 +21,7 @@ export default function Sidebar({ categories, menuOpen, activeCategory, setActiv
 
                         {activeCategory === category.title && (
                             <div className="mt-2 pl-4 flex flex-col gap-3">
-                                <aside className='border-base-1 w-[70%] border rounded-lg flex-shrink-0 '>
+                                <aside className='border-base-1 w-full border rounded-lg flex-shrink-0 '>
                                     <div className='border-b border-b-base-1'>
                                         <img src={category.image} alt={category.title} className="rounded-tr-lg rounded-tl-lg object-cover size-full" />
                                     </div>

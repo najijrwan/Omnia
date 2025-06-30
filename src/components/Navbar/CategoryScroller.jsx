@@ -26,7 +26,7 @@ export default function CategoryScroller({ categories, onHoverCategory }) {
                         key={category.title}
                         onMouseEnter={() => onHoverCategory(category.title)}
                         onMouseLeave={() => onHoverCategory(null)}
-                        className="text-sm font-bold text-secondary border-b-[4px] border-transparent hover:border-b-base-1 hover:text-base-1 transition py-2 px-4"
+                        className="text-sm font-bold text-secondary border-b-[4px] border-transparent cursor-pointer hover:border-b-base-1 hover:text-base-1 transition py-2 px-4"
                     >
                         {category.title}
                     </button>

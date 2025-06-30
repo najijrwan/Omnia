@@ -31,7 +31,7 @@ export default function CategoriesWithDetails({ categories }) {
 
             {currentCategory && lockDisplay && (
                 <main
-                    className="bg-main absolute w-full h-[80vh] rounded-b-3xl flex p-4 gap-3 shadow-2xl overflow-hidden">
+                    className="bg-main absolute w-full h-[70vh] rounded-b-3xl flex p-4 gap-3 shadow-2xl overflow-hidden">
 
                     {/* Subcategories Scroller */}
                     <div className="relative w-[515px] h-full flex justify-start items-center lg:w-[670px] xl:w-[820px] 2xl:w-full!">
@@ -51,11 +51,11 @@ export default function CategoriesWithDetails({ categories }) {
                             className="flex overflow-x-auto gap-3 px-2 scroll-smooth hide-scrollbar h-full"
                         >
                             {currentCategory.subcategories.map(sub => (
-                                <section key={sub.title} className="rounded-xl border border-secondary p-4 w-[140px] h-full shrink-0">
+                                <section key={sub.title} className="p-4 w-[140px] h-full shrink-0">
                                     <h2 className="font-semibold text-base-1 text-[14px] lg:text-[17px] xl:text-[20px] 2xl:text-[25px] break-words mb-2">{sub.title}</h2>
-                                    <ul className="ml-4 list-disc text-secondary space-y-1">
+                                    <ul className="text-secondary space-y-1">
                                         {sub.items.map(item => (
-                                            <li key={item}>{item}</li>
+                                            <li key={item} className='list-disc hover:text-base-1'><a href="#" className='cursor-pointer hover:text-base-1'>{item}</a></li>
                                         ))}
                                     </ul>
                                 </section>
