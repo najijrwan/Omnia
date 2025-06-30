@@ -12,10 +12,11 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState(null);
+  const [overlayVisible, setOverlayVisible] = useState(false);
 
   return (
     <>
-      <header className="bg-secondary px-4 py-3 flex items-center sm:justify-around sm:gap-10 text-white z-10">
+      <header className="relative bg-secondary px-4 py-3 flex items-center sm:justify-around sm:gap-10 text-white z-30">
         <div className="flex items-center gap-5">
           <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
             {/* menu icon svg */}
@@ -47,13 +48,20 @@ export default function Navbar() {
         </div>
       </header>
 
-      <CategoriesWithDetails categories={categories} />
+      <CategoriesWithDetails
+        categories={categories}
+        overlayVisible={overlayVisible}
+        setOverlayVisible={setOverlayVisible} />
 
-      {(menuOpen || searchOpen) && (
-        <div className="fixed top-0 left-0 w-full h-full bg-white/10 z-10 backdrop-blur-[6px]" onClick={() => {
-          setMenuOpen(false);
-          setSearchOpen(false);
-        }} />
+      {(menuOpen || searchOpen || overlayVisible) && (
+        <div
+          className="fixed top-0 left-0 w-full h-full bg-white/10 z-10 backdrop-blur-[6px]"
+          onClick={() => {
+            setMenuOpen(false);
+            setSearchOpen(false);
+            setOverlayVisible(false);
+          }}
+        />
       )}
 
       <Sidebar
