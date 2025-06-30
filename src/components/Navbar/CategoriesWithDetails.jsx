@@ -52,7 +52,7 @@ export default function CategoriesWithDetails({ categories }) {
                         >
                             {currentCategory.subcategories.map(sub => (
                                 <section key={sub.title} className="rounded-xl border border-secondary p-4 w-[140px] h-full shrink-0">
-                                    <h2 className="font-semibold text-base-1 text-[14px] lg:text-[16px] break-words mb-2">{sub.title}</h2>
+                                    <h2 className="font-semibold text-base-1 text-[14px] lg:text-[17px] xl:text-[20px] 2xl:text-[25px] break-words mb-2">{sub.title}</h2>
                                     <ul className="ml-4 list-disc text-secondary space-y-1">
                                         {sub.items.map(item => (
                                             <li key={item}>{item}</li>

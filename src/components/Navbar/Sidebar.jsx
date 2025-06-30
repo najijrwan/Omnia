@@ -10,9 +10,9 @@ export default function Sidebar({ categories, menuOpen, activeCategory, setActiv
             <button onClick={() => setMenuOpen(false)} className='absolute right-2 top-2'>
                 <X className='text-main' />
             </button>
-
             <ul className="flex flex-col p-4 gap-4 mt-6">
                 {categories.map((category) => (
+
                     <li key={category.title}>
                         <button className="flex w-full items-center justify-between" onClick={() => handleClick(category.title)}>
                             <p className="font-semibold text-base-1">{category.title}</p>
@@ -21,6 +21,12 @@ export default function Sidebar({ categories, menuOpen, activeCategory, setActiv
 
                         {activeCategory === category.title && (
                             <div className="mt-2 pl-4 flex flex-col gap-3">
+                                <aside className='border-base-1 w-[70%] border rounded-lg flex-shrink-0 '>
+                                    <div className='border-b border-b-base-1'>
+                                        <img src={category.image} alt={category.title} className="rounded-tr-lg rounded-tl-lg object-cover size-full" />
+                                    </div>
+                                    <p className="text-secondary bg-main rounded-br-[inherit] rounded-bl-[inherit] text-sm p-2">{category.description}</p>
+                                </aside>
                                 {category.subcategories.map((sub) => (
                                     <div key={sub.title}>
                                         <p className="font-[300] text-main">{sub.title}</p>
