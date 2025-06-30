@@ -1,7 +1,7 @@
 //CategoryScroller.jsx
 import { useRef } from 'react';
 
-export default function CategoryScroller({ categories, onHoverCategory }) {
+export default function CategoryScroller({ categories, onHoverCategory, activeCategory }) {
     const scrollRef = useRef();
 
     const scroll = (dir) => {
@@ -26,10 +26,13 @@ export default function CategoryScroller({ categories, onHoverCategory }) {
                         key={category.title}
                         onMouseEnter={() => onHoverCategory(category.title)}
                         onMouseLeave={() => onHoverCategory(null)}
-                        className="text-sm font-bold text-secondary border-b-[4px] border-transparent cursor-pointer hover:border-b-base-1 hover:text-base-1 transition py-2 px-4"
+                        className={`text-sm font-bold border-b-[4px] cursor-pointer transition py-2 px-4
+    ${activeCategory === category.title ? 'text-base-1 border-b-base-1' : 'text-secondary border-transparent hover:text-base-1 hover:border-b-base-1'}
+  `}
                     >
                         {category.title}
                     </button>
+
                 ))}
             </nav>
         </header>

@@ -37,6 +37,7 @@ export default function CategoriesWithDetails({ categories, overlayVisible, setO
                 onHoverCategory={(title) => {
                     if (title) setHoveredCategory(title);
                 }}
+                activeCategory={hoveredCategory}
             />
 
             {currentCategory && lockDisplay && (
