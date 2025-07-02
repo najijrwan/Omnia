@@ -3,7 +3,7 @@ import { features } from "../../data/mainContent/features";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Hero() {
-  const [index, setIndex] = useState(4);
+  const [index, setIndex] = useState(0);
   const touchStartX = useRef(null);
   const touchEndX = useRef(null);
 
@@ -36,11 +36,11 @@ export default function Hero() {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
       className=" 
-        relative flex flex-col items-center justify-center gap-10 text-center w-full h-[250px] p-5 bg-secondary border-b border-b-base-2/50 overflow-hidden"
+        relative flex flex-col items-center justify-between text-center w-full h-[260px] p-5 bg-base-1/10 border-b border-b-base-2/50 overflow-hidden"
     >
 
       {/* Feature content */}
-      <div className="transition-all duration-500 max-w-2xl px-3">
+      <div className="transition-all duration-500 max-w-2xl px-5">
         <h1 className="text-[30px] text-base-1 font-extrabold sm:text-[35px]">
           {features[index].title}
         </h1>
@@ -64,7 +64,7 @@ export default function Hero() {
       </button>
 
       {/* Dots Indicator */}
-      <div className="flex flex-col items-center justify-center gap-3 mt-auto">
+      <div className="flex flex-col items-center justify-center gap-3">
         <button className="bg-base-1 text-secondary px-6 py-2 rounded-md font-semibold cursor-pointer hover:bg-base-1/70 transition">
           Shop Now
         </button>
