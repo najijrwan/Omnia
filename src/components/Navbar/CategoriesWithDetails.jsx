@@ -42,10 +42,10 @@ export default function CategoriesWithDetails({ categories, overlayVisible, setO
 
             {currentCategory && lockDisplay && (
                 <main
-                    className="bg-main border-b border-b-base-1 absolute w-full h-[70vh] rounded-b-3xl p-4 flex gap-3 shadow-2xl overflow-hidden">
+                    className="bg-main border-b border-b-base-1 absolute w-full h-[70vh] rounded-b-3xl p-4 flex gap-10 shadow-2xl overflow-hidden">
 
                     {/* Subcategories Scroller */}
-                    <div className="relative w-[515px] h-full flex justify-start items-start lg:w-[670px] xl:w-[820px] 2xl:w-full!">
+                    <div className="relative w-[515px] h-full flex justify-start items-start flex-grow lg:w-[670px] xl:w-[820px] 2xl:w-full!">
                         {currentCategory.subcategories.length > 3 && (
                             <button
                                 onClick={() => subScrollRef.current?.scrollBy({ left: -153, behavior: 'smooth' })}
@@ -80,7 +80,7 @@ export default function CategoriesWithDetails({ categories, overlayVisible, setO
                         {currentCategory.subcategories.length > 3 && (
                             <button
                                 onClick={() => subScrollRef.current?.scrollBy({ left: 153, behavior: 'smooth' })}
-                                className="bg-base-1 rounded-full p-1 z-30 cursor-pointer hover:bg-base-1/70"
+                                className="bg-base-1 ml-5 rounded-full p-1 z-30 cursor-pointer hover:bg-base-1/70"
                             >
                                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="3">
                                     <path d="M9 18l6-6-6-6" />
@@ -89,8 +89,6 @@ export default function CategoriesWithDetails({ categories, overlayVisible, setO
                         )}
 
                     </div>
-
-                    <div className='w-px bg-secondary h-full'></div>
 
                     {/* Sidebar */}
                     <aside className='flex flex-col ml-auto w-[300px] gap-1'>
