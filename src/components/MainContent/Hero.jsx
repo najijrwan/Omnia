@@ -3,7 +3,7 @@ import { features } from "../../data/mainContent/features";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Hero() {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(4);
   const touchStartX = useRef(null);
   const touchEndX = useRef(null);
 
@@ -33,19 +33,18 @@ export default function Hero() {
 
   return (
     <section
-      className=" 
-        relative flex flex-col gap-5 text-center w-full h-[45vh] p-5 bg-secondary border-b border-b-white/40 overflow-hidden
-        sm:text-center"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
+      className=" 
+        relative flex flex-col items-center justify-center gap-10 text-center w-full h-[250px] p-5 bg-secondary border-b border-b-base-2/50 overflow-hidden"
     >
 
       {/* Feature content */}
-      <div className="transition-all duration-500 max-w-2xl">
-        <h1 className="text-[8vw] text-base-1 font-bold">
+      <div className="transition-all duration-500 max-w-2xl px-3">
+        <h1 className="text-[30px] text-base-1 font-extrabold sm:text-[35px]">
           {features[index].title}
         </h1>
-        <p className="text-[4vw] text-main mt-2">
+        <p className="text-[15px] text-main mt-2 sm:text-[17.5px]">
           {features[index].description}
         </p>
       </div>
@@ -53,19 +52,19 @@ export default function Hero() {
       {/* Navigation buttons */}
       <button
         onClick={prevSlide}
-        className="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 bg-base-1 text-white p-2 rounded-full hover:bg-base-1/80 transition"
+        className="hidden md:block absolute left-2 top-1/2 -translate-y-1/2 bg-base-1 text-white p-1.5 rounded-full cursor-pointer hover:bg-base-1/70 transition"
       >
         <ChevronLeft />
       </button>
       <button
         onClick={nextSlide}
-        className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 bg-base-1 text-white p-2 rounded-full hover:bg-base-1/80 transition"
+        className="hidden md:block absolute right-2 top-1/2 -translate-y-1/2 bg-base-1 text-white p-1 rounded-full cursor-pointer hover:bg-base-1/70 transition"
       >
         <ChevronRight />
       </button>
 
       {/* Dots Indicator */}
-      <div className="flex flex-col items-center justify-center gap-3 mt-auto ">
+      <div className="flex flex-col items-center justify-center gap-3 mt-auto">
         <button className="bg-base-1 text-secondary px-6 py-2 rounded-md font-semibold cursor-pointer hover:bg-base-1/70 transition">
           Shop Now
         </button>

@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="relative bg-secondary px-4 py-3 flex items-center sm:justify-around sm:gap-10 text-white z-30">
+      <header className="relative bg-secondary px-4 py-3 flex items-center sm:justify-around sm:gap-10 text-white border-b border-base-2/50 z-30">
         <div className="flex items-center gap-5">
           <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
             {/* menu icon svg */}
