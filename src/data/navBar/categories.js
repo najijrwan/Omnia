@@ -37,46 +37,30 @@ export const categories = [
         title: "Men's Fashion",
         subcategories: [
             {
-                title: "Apparel",
-                items: ["Shirts", "Pants", "Outerwear", "Suits"]
+                title: "Spring/Summer",
+                items: ["T-shirts", "Polos", "Pants", "Shorts", "Sandals", "Sunglasses", "Hats"]
             },
             {
                 title: "Footwear",
-                items: ["Casual Shoes", "Formal Shoes", "Sneakers", "Sandals"]
+                items: ["Casual Shoes", "Formal Shoes", "Sneakers", "Sandals", "Boots", "Loafers", "Slippers"]
             },
             {
-                title: "Devices",
-                items: ["Smartphones", "Laptops", "Tablets", "Desktops"]
+                title: "Bags & Accessories",
+                items: ["Backpacks", "Wallets", "Belts", "Watches", "Sunglasses", "Hats", "Scarves"]
             },
             {
-                title: "Accessories",
-                items: ["Chargers", "Headphones", "Cases", "Cables"]
+                title: "Formal Wear",
+                items: ["Suits", "Dress Shirts", "Ties", "Blazers", "Dress Shoes"]
             },
             {
-                title: "Makeup",
-                items: ["Foundation", "Lipstick", "Mascara", "Blush"]
-            },
-            {
-                title: "Skincare",
-                items: ["Moisturizers", "Cleansers", "Serums", "Sunscreens"]
-            },
-            {
-                title: "Fragrance",
-                items: ["Perfume", "Cologne", "Body Mist", "Essential Oils"]
+                title: "Casual Wear",
+                items: ["T-shirts", "Jeans", "Shorts", "Casual Shirts", "Sweaters"]
             }
         ]
     },
     {
         title: "Women's Fashion",
         subcategories: [
-            {
-                title: "Apparel",
-                items: ["Dresses", "Tops", "Outerwear", "Skirts"]
-            },
-            {
-                title: "Footwear",
-                items: ["Heels", "Flats", "Sandals", "Sneakers"]
-            }
         ]
     },
     {

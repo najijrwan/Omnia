@@ -8,7 +8,7 @@ import Testimonials from "./Testimonials";
 
 export default function MainContent() {
     return (
-        <main className="flex flex-col h-full">
+        <main className="flex flex-col">
             <Hero />
             <ProductSection title="demo title" />
             <PromotionBanner />
