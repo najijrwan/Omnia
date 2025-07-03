@@ -2,7 +2,6 @@ export const categories = [
     {
         title: "Electronics",
         image: "/Images/electronics.png",
-        description: "Explore the latest in electronics, from smartphones to smartwatches.",
         subcategories: [
             {
                 title: "Mobile & Tablet Devices",
@@ -27,7 +26,8 @@ export const categories = [
             {
                 title: "Cameras & Photography",
                 items: ["DSLR Cameras", "Mirrorless Cameras", "Action Cameras", "Tripods", "Camera Lenses", "Camera Bags"]
-            }, {
+            },
+            {
                 title: "demo",
                 items: ["DSLR Cameras", "Mirrorless Cameras", "Action Cameras", "Tripods", "Camera Lenses", "Camera Bags"]
             }
