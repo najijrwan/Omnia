@@ -61,18 +61,50 @@ export const categories = [
     {
         title: "Women's Fashion",
         subcategories: [
+            {
+                title: "Clothing",
+                items: ["Dresses", "Tops", "Pants", "Skirts", "Outerwear", "Activewear"]
+            },
+            {
+                title: "Shoes",
+                items: ["Sneakers", "Heels", "Boots", "Sandals", "Flats"]
+            },
+            {
+                title: "Accessories",
+                items: ["Handbags", "Jewelry", "Scarves", "Belts", "Hats", "Sunglasses"]
+            },
+            {
+                title: "Lingerie & Sleepwear",
+                items: ["Bras", "Panties", "Sleep Sets", "Robes"]
+            },
+            {
+                title: "Beauty",
+                items: ["Makeup", "Skincare", "Fragrances", "Haircare"]
+            }
         ]
     },
     {
         title: "Kid's Fashion",
         subcategories: [
             {
-                title: "Apparel",
-                items: ["Shirts", "Pants", "Outerwear", "Dresses"]
+                title: "Clothing",
+                items: ["T-Shirts", "Sweaters", "Jeans", "Leggings", "Dresses", "Shorts", "Jackets"]
             },
             {
-                title: "Footwear",
-                items: ["Sneakers", "Sandals", "Boots", "Casual Shoes"]
+                title: "Shoes",
+                items: ["Sneakers", "Boots", "Sandals", "School Shoes", "Slippers"]
+            },
+            {
+                title: "Accessories",
+                items: ["Hats", "Backpacks", "Hair Accessories", "Belts", "Gloves"]
+            },
+            {
+                title: "Baby & Toddler",
+                items: ["Onesies", "Rompers", "Sleepwear", "Booties", "Bibs"]
+            },
+            {
+                title: "Seasonal Wear",
+                items: ["Raincoats", "Swimsuits", "Thermal Sets", "Snow Gear"]
             }
         ]
     },
@@ -80,12 +112,28 @@ export const categories = [
         title: "Home & Kitchen",
         subcategories: [
             {
-                title: "Kitchen",
-                items: ["Cookware", "Utensils", "Appliances", "Storage"]
+                title: "Furniture",
+                items: ["Sofas", "Beds", "Dining Tables", "Chairs", "Storage Units"]
             },
             {
-                title: "Home Decor",
-                items: ["Furniture", "Bedding", "Wall Art", "Lighting"]
+                title: "Kitchenware",
+                items: ["Cookware Sets", "Utensils", "Cutlery", "Bakeware", "Food Storage"]
+            },
+            {
+                title: "Home Décor",
+                items: ["Wall Art", "Vases", "Cushions", "Rugs", "Candles"]
+            },
+            {
+                title: "Appliances",
+                items: ["Microwaves", "Blenders", "Toasters", "Coffee Makers", "Refrigerators"]
+            },
+            {
+                title: "Bedding & Bath",
+                items: ["Bed Sheets", "Comforters", "Pillows", "Towels", "Bath Mats"]
+            },
+            {
+                title: "Cleaning Supplies",
+                items: ["Vacuum Cleaners", "Mops", "Detergents", "Brushes", "Trash Bags"]
             }
         ]
     },
@@ -94,15 +142,27 @@ export const categories = [
         subcategories: [
             {
                 title: "Makeup",
-                items: ["Foundation", "Lipstick", "Mascara", "Blush"]
+                items: ["Foundation", "Lipsticks", "Eyeshadow", "Mascara", "Blush", "Concealer"]
             },
             {
                 title: "Skincare",
-                items: ["Moisturizers", "Cleansers", "Serums", "Sunscreens"]
+                items: ["Cleansers", "Moisturizers", "Serums", "Toners", "Face Masks", "Sunscreen"]
             },
             {
-                title: "Fragrance",
-                items: ["Perfume", "Cologne", "Body Mist", "Essential Oils"]
+                title: "Fragrances",
+                items: ["Perfume", "Eau de Toilette", "Body Mists", "Roll-Ons", "Scented Oils"]
+            },
+            {
+                title: "Haircare",
+                items: ["Shampoo", "Conditioner", "Hair Masks", "Styling Products", "Hair Tools"]
+            },
+            {
+                title: "Bath & Body",
+                items: ["Body Wash", "Lotions", "Scrubs", "Bath Bombs", "Hand Creams"]
+            },
+            {
+                title: "Men's Grooming",
+                items: ["Colognes", "Beard Care", "Hair Styling", "Face Wash", "Aftershave"]
             }
         ]
     },
@@ -110,12 +170,32 @@ export const categories = [
         title: "Baby",
         subcategories: [
             {
-                title: "Feeding",
-                items: ["Bottles", "High Chairs", "Feeding Tools"]
+                title: "Clothing",
+                items: ["Onesies", "Sleepwear", "Rompers", "Bodysuits", "Jackets", "Sets"]
             },
             {
-                title: "Clothing",
-                items: ["Onesies", "Pajamas", "Outerwear", "Shoes"]
+                title: "Footwear",
+                items: ["Booties", "Pre-walker Shoes", "Socks", "Sandals"]
+            },
+            {
+                title: "Nursery",
+                items: ["Cribs", "Mattresses", "Changing Tables", "Mobiles", "Storage Baskets"]
+            },
+            {
+                title: "Feeding",
+                items: ["Bottles", "Formula", "High Chairs", "Bibs", "Sippy Cups"]
+            },
+            {
+                title: "Bath & Skincare",
+                items: ["Baby Shampoo", "Body Wash", "Lotions", "Towels", "Bath Toys"]
+            },
+            {
+                title: "Travel Gear",
+                items: ["Strollers", "Car Seats", "Baby Carriers", "Diaper Bags"]
+            },
+            {
+                title: "Toys & Learning",
+                items: ["Rattles", "Soft Toys", "Play Mats", "Early Learning Books"]
             }
         ]
     },
@@ -123,12 +203,32 @@ export const categories = [
         title: "Toys",
         subcategories: [
             {
-                title: "Educational",
-                items: ["Learning Toys", "Puzzles", "STEM Kits", "Building Blocks"]
+                title: "Educational Toys",
+                items: ["STEM Kits", "Puzzle Games", "Building Blocks", "Flash Cards", "Montessori Toys"]
             },
             {
-                title: "Action & Play",
-                items: ["Action Figures", "Remote Control Cars", "Stuffed Animals", "Playsets"]
+                title: "Outdoor Play",
+                items: ["Ride-ons", "Slides", "Swings", "Water Toys", "Sports Sets"]
+            },
+            {
+                title: "Action & Adventure",
+                items: ["Figurines", "Playsets", "Vehicles", "Superhero Toys", "Transformables"]
+            },
+            {
+                title: "Creative & Art",
+                items: ["Coloring Sets", "Craft Kits", "Modeling Clay", "Stickers", "Drawing Boards"]
+            },
+            {
+                title: "Soft & Plush Toys",
+                items: ["Stuffed Animals", "Comfort Dolls", "Sensory Plushies", "Character Plush"]
+            },
+            {
+                title: "Electronic Toys",
+                items: ["RC Cars", "Learning Tablets", "Musical Instruments", "Interactive Robots"]
+            },
+            {
+                title: "Age-Based Toys",
+                items: ["Infant Toys", "Toddler Toys", "Preschool Toys", "5–8 Years", "9+ Years"]
             }
         ]
     },
@@ -136,12 +236,32 @@ export const categories = [
         title: "Sports & Outdoors",
         subcategories: [
             {
-                title: "Sports",
-                items: ["Basketball", "Soccer", "Baseball", "Tennis"]
+                title: "Fitness Equipment",
+                items: ["Treadmills", "Dumbbells", "Yoga Mats", "Resistance Bands", "Exercise Bikes"]
             },
             {
-                title: "Outdoor",
-                items: ["Camping", "Hiking", "Cycling", "Fishing"]
+                title: "Outdoor Recreation",
+                items: ["Camping Gear", "Tents", "Sleeping Bags", "Coolers", "Portable Stoves"]
+            },
+            {
+                title: "Team Sports",
+                items: ["Soccer Balls", "Basketballs", "Jerseys", "Shin Guards", "Goal Nets"]
+            },
+            {
+                title: "Water Sports",
+                items: ["Swimwear", "Goggles", "Snorkeling Gear", "Inflatable Kayaks", "Pool Floats"]
+            },
+            {
+                title: "Cycling",
+                items: ["Bicycles", "Helmets", "Locks", "Gloves", "Repair Kits"]
+            },
+            {
+                title: "Running & Training",
+                items: ["Running Shoes", "Smartwatches", "Hydration Belts", "Compression Wear"]
+            },
+            {
+                title: "Winter Sports",
+                items: ["Ski Gear", "Snowboards", "Gloves", "Thermal Wear", "Ski Goggles"]
             }
         ]
     },
@@ -149,12 +269,28 @@ export const categories = [
         title: "Health & Nutrition",
         subcategories: [
             {
-                title: "Vitamins & Supplements",
-                items: ["Multivitamins", "Protein Powders", "Omega-3", "Probiotics"]
+                title: "Supplements",
+                items: ["Vitamins", "Minerals", "Protein Powders", "Omega-3", "Probiotics"]
             },
             {
-                title: "Personal Care",
-                items: ["Oral Care", "Feminine Care", "First Aid", "Massage Tools"]
+                title: "Healthy Foods",
+                items: ["Organic Snacks", "Superfoods", "Whole Grains", "Nut Butters", "Gluten-Free Options"]
+            },
+            {
+                title: "Fitness Nutrition",
+                items: ["Energy Bars", "Hydration Drinks", "Pre-Workout", "Post-Workout", "Meal Replacements"]
+            },
+            {
+                title: "Personal Health",
+                items: ["Multivitamins", "Immunity Boosters", "Sleep Aids", "Digestive Support"]
+            },
+            {
+                title: "Natural Remedies",
+                items: ["Herbal Teas", "Essential Oils", "Adaptogens", "Homeopathic Products"]
+            },
+            {
+                title: "Weight Management",
+                items: ["Fat Burners", "Appetite Control", "Low-Calorie Snacks", "Smart Scales"]
             }
         ]
     },
@@ -162,12 +298,32 @@ export const categories = [
         title: "Automotive",
         subcategories: [
             {
-                title: "Interior",
-                items: ["Seat Covers", "Floor Mats", "Steering Wheel Covers", "Car Organizers"]
+                title: "Car Accessories",
+                items: ["Seat Covers", "Floor Mats", "Phone Mounts", "Sun Shades", "Car Organizers"]
             },
             {
-                title: "Exterior",
-                items: ["Car Covers", "Mirrors", "Lights", "Decals & Stickers"]
+                title: "Exterior Parts",
+                items: ["Mirrors", "Grilles", "Bumpers", "Spoilers", "Wiper Blades"]
+            },
+            {
+                title: "Interior Parts",
+                items: ["Steering Wheel Covers", "Dash Kits", "Shift Knobs", "Pedal Covers"]
+            },
+            {
+                title: "Replacement Parts",
+                items: ["Brake Pads", "Batteries", "Spark Plugs", "Filters", "Headlights"]
+            },
+            {
+                title: "Car Care",
+                items: ["Cleaning Kits", "Wax & Polish", "Microfiber Cloths", "Tire Shine", "Vacuum Cleaners"]
+            },
+            {
+                title: "Tools & Equipment",
+                items: ["Jacks", "Tool Sets", "OBD Scanners", "Jump Starters", "Air Compressors"]
+            },
+            {
+                title: "Motor Oils & Fluids",
+                items: ["Engine Oil", "Coolant", "Transmission Fluid", "Brake Fluid", "Windshield Washer"]
             }
         ]
     },
@@ -175,12 +331,28 @@ export const categories = [
         title: "Stationary",
         subcategories: [
             {
-                title: "Writing",
-                items: ["Pens", "Pencils", "Markers", "Highlighters"]
+                title: "Writing Instruments",
+                items: ["Pens", "Pencils", "Markers", "Highlighters", "Mechanical Pencils"]
             },
             {
-                title: "Organization",
-                items: ["Notebooks", "Binders", "Folders", "Desk Accessories"]
+                title: "Paper Products",
+                items: ["Notebooks", "Journals", "Sticky Notes", "Sketch Pads", "Index Cards"]
+            },
+            {
+                title: "Organizers & Files",
+                items: ["Folders", "Binders", "File Holders", "Document Pouches", "Planners"]
+            },
+            {
+                title: "Desk Supplies",
+                items: ["Staplers", "Tape Dispensers", "Scissors", "Paper Clips", "Push Pins"]
+            },
+            {
+                title: "Art & Craft",
+                items: ["Crayons", "Watercolors", "Glue Sticks", "Craft Paper", "Stickers"]
+            },
+            {
+                title: "School Essentials",
+                items: ["Geometry Sets", "Rulers", "Erasers", "Sharpeners", "Backpacks"]
             }
         ]
     },
@@ -189,24 +361,27 @@ export const categories = [
         subcategories: [
             {
                 title: "Books",
-                items: ["Fiction", "Non-fiction", "Biographies", "Textbooks"]
+                items: ["Fiction", "Non-Fiction", "Children's Books", "Young Adult", "Biographies", "Self-Help", "Graphic Novels"]
             },
             {
-                title: "Media",
-                items: ["DVDs", "CDs", "Digital Downloads", "Magazines"]
-            }
-        ]
-    },
-    {
-        title: "Food",
-        subcategories: [
-            {
-                title: "Snacks",
-                items: ["Chips", "Nuts", "Biscuits", "Chocolate"]
+                title: "Magazines & Journals",
+                items: ["Fashion Magazines", "Tech Journals", "Lifestyle Magazines", "Academic Journals", "Comics"]
             },
             {
-                title: "Pantry",
-                items: ["Rice", "Pasta", "Canned Goods", "Spices"]
+                title: "E-Books",
+                items: ["Kindle Edition", "PDF Downloads", "Interactive E-Books", "Audiobooks"]
+            },
+            {
+                title: "Music",
+                items: ["Vinyl Records", "CDs", "Digital Downloads", "Instruments", "Music Accessories"]
+            },
+            {
+                title: "Movies & TV",
+                items: ["DVDs", "Blu-rays", "Streaming Codes", "Box Sets"]
+            },
+            {
+                title: "Educational Media",
+                items: ["Documentaries", "Language Learning Kits", "Online Courses", "Tutoring Materials"]
             }
         ]
     }
