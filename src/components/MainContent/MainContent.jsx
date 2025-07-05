@@ -10,7 +10,7 @@ export default function MainContent() {
     return (
         <main className="flex flex-col">
             <Hero />
-            <ProductSection title="demo title" />
+            <ProductSection title="New Arrivals" />
             <PromotionBanner />
             <HorizontalProductScroller title="Recommended for You" />
             <Testimonials />

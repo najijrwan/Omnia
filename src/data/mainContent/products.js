@@ -4,7 +4,7 @@ export const products = [
         id: 1,
         name: "Wireless Headphones",
         price: "$79.99",
-        image: "https://picsum.photos/200?random=1",
+        image: "/productImages/iphone-17.png",
     },
     {
         id: 2,
@@ -43,3 +43,12 @@ export const products = [
         image: "https://picsum.photos/200?random=7",
     },
 ];
+
+export const newArrivals = [
+    {
+        id: 1,
+        name: "iPhone 17",
+        price: "$999.99",
+        image: "/productImages/iphone-17.png",
+    }
+]

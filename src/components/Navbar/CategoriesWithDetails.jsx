@@ -91,8 +91,8 @@ export default function CategoriesWithDetails({ categories, overlayVisible, setO
                     </div>
 
                     {/* Sidebar */}
-                    <aside className='text-center ml-auto w-[300px]'>
-                        <img src={currentCategory.image} alt={currentCategory.title} className="rounded-xl max-w-[300px] w-full" />
+                    <aside className='text-center '>
+                        <img src={currentCategory.image} alt={currentCategory.title} className="rounded-xl block max-h-[300px]" />
                         <h1 className="text-2xl font-bold text-base-1 mt-2">{currentCategory.title}</h1>
                     </aside>
                 </main>

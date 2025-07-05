@@ -36,7 +36,7 @@ export default function Hero() {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
       className=" 
-        relative flex flex-col items-center justify-between text-center w-full h-[260px] p-5 bg-base-1/10 border-b border-b-base-2/50 overflow-hidden"
+        relative flex flex-col items-center justify-between text-center w-full h-[260px] p-5 bg-secondary border-b border-b-base-2/50 overflow-hidden"
     >
 
       {/* Feature content */}

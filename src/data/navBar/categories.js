@@ -35,6 +35,7 @@ export const categories = [
     },
     {
         title: "Men's Fashion",
+        image: "/Images/mens-fashion.png",
         subcategories: [
             {
                 title: "Spring/Summer",
