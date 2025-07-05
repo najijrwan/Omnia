@@ -12,7 +12,7 @@ export default function ProductCard({ product }) {
             {/* Glow ring */}
             <div className="absolute inset-0 z-0 rounded-full blur-2xl opacity-30 group-hover:opacity-60 transition-all duration-500 ease-in-out bg-gradient-to-tr from-base-1 to-secondary" />
 
-            <h3 className="mt-3 font-semibold text-secondary tracking-wide drop-shadow-sm">
+            <h3 className="mt-3 font-semibold text-secondary tracking-wide drop-shadow-sm text-[12px]">
                 {product.name}
             </h3>
         </div>
