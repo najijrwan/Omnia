@@ -1,6 +1,6 @@
 export default function ProductCard({ product }) {
     return (
-        <div className="relative group cursor-pointer text-center">
+        <div className="relative group cursor-pointer text-center size-30">
             <div className="relative z-10 bg-main/60 backdrop-blur-xl shadow-[inset_0_0_15px_#ffffff30,_0_15px_30px_#00000060] rounded-full transition-transform duration-500 ease-in-out">
                 <img
                     src={product.image}
