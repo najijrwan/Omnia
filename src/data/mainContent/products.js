@@ -50,5 +50,11 @@ export const newArrivals = [
         name: "iPhone 17",
         price: "$999.99",
         image: "/productImages/iphone-17.png",
+    },
+    {
+        id: 2,
+        name: "Apple Watch",
+        price: "$399.99",
+        image: "/productImages/apple-watch-2.png",
     }
 ]
