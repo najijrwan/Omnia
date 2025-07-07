@@ -19,8 +19,16 @@ export default function ProductSection({ title }) {
 
   return (
     <section className="p-4">
-      <h2 className="text-2xl font-semibold text-base-1 mb-4">{title}</h2>
-      <div className='relative flex flex-col items-center'>
+      <header className='flex items-center justify-between'>
+        <h2 className="text-2xl font-semibold text-base-1">{title}</h2>
+        <ul className='inline-flex items-center'>
+          <li className='bg-base-1 px-2 py-1 border-r cursor-pointer'>1</li>
+          <li className='bg-base-1 px-2 py-1 border-r cursor-pointer'>2</li>
+          <li className='bg-base-1 px-2 py-1 border-r cursor-pointer'>3</li>
+          <li className='bg-base-1 px-2 py-1 border-r cursor-pointer'>4</li>
+        </ul>
+      </header>
+      <div className='relative flex flex-col '>
         <div
           ref={scrollRef}
           className="flex gap-3 overflow-x-auto overflow-y-clip scroll-smooth hide-scrollbar"
@@ -28,22 +36,6 @@ export default function ProductSection({ title }) {
           {newArrivals.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
-        </div>
-
-        <div>
-          <button
-            onClick={() => scroll('left')}
-            className='text-base-1 rounded-full cursor-pointer hover:bg-base-1 hover:text-white transtion-all duration-300 ease-in-out'
-          >
-            <ChevronLeft />
-          </button>
-
-          <button
-            onClick={() => scroll('right')}
-            className='text-base-1 rounded-full cursor-pointer hover:bg-base-1 hover:text-white transtion-all duration-300 ease-in-out'
-          >
-            <ChevronRight />
-          </button>
         </div>
       </div>
     </section>
