@@ -52,13 +52,13 @@ export default function Hero() {
       {/* Navigation buttons */}
       <button
         onClick={prevSlide}
-        className="hidden md:block absolute left-2 top-1/2 -translate-y-1/2 bg-base-1 text-white p-1.5 rounded-full cursor-pointer hover:bg-base-1/70 transition"
+        className="hidden md:block absolute left-2 top-1/2 -translate-y-1/2 bg-secondary text-white p-1.5 rounded-full cursor-pointer hover:bg-base-1 transition-all duration-300 ease-in-out"
       >
         <ChevronLeft />
       </button>
       <button
         onClick={nextSlide}
-        className="hidden md:block absolute right-2 top-1/2 -translate-y-1/2 bg-base-1 text-white p-1 rounded-full cursor-pointer hover:bg-base-1/70 transition"
+        className="hidden md:block absolute right-2 top-1/2 -translate-y-1/2 bg-secondary text-white p-1 rounded-full cursor-pointer hover:bg-base-1 transition-all duration-300 ease-in-out"
       >
         <ChevronRight />
       </button>
