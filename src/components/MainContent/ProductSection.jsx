@@ -18,20 +18,14 @@ export default function ProductSection({ title }) {
   };
 
   return (
-    <section className="p-4">
+    <section className="">
       <header className='flex items-center justify-between'>
         <h2 className="text-2xl font-semibold text-base-1">{title}</h2>
-        <ul className='inline-flex items-center'>
-          <li className='bg-base-1 px-2 py-1 border-r cursor-pointer'>1</li>
-          <li className='bg-base-1 px-2 py-1 border-r cursor-pointer'>2</li>
-          <li className='bg-base-1 px-2 py-1 border-r cursor-pointer'>3</li>
-          <li className='bg-base-1 px-2 py-1 border-r cursor-pointer'>4</li>
-        </ul>
       </header>
-      <div className='relative flex flex-col '>
+      <div className='relative flex flex-col'>
         <div
           ref={scrollRef}
-          className="flex gap-3 overflow-x-auto overflow-y-clip scroll-smooth hide-scrollbar"
+          className="flex justify-around gap-3 w-full overflow-x-auto overflow-y-clip scroll-smooth hide-scrollbar"
         >
           {newArrivals.map((product) => (
             <ProductCard key={product.id} product={product} />
