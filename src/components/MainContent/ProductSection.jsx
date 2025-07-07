@@ -18,15 +18,27 @@ export default function ProductSection({ title }) {
   };
 
   return (
-    <section className="">
+    <section className="p-2 mx-4 bg-sections rounded-lg border border-classic">
       <header className='flex items-center justify-between'>
         <h2 className="text-2xl font-semibold text-base-1">{title}</h2>
+        <div className='hidden items-center lg:flex'>
+          <button
+            onClick={() => scroll('left')}
+            className='p-2 text-base-1 rounded-full cursor-pointer hover:bg-base-1 hover:text-white transtion-all duration-300 ease-in-out'
+          >
+            <ChevronLeft />
+          </button>
+          <button
+            onClick={() => scroll('right')}
+            className='p-2 text-base-1 rounded-full cursor-pointer hover:bg-base-1 hover:text-white transtion-all duration-300 ease-in-out'
+          >
+            <ChevronRight />
+          </button>
+        </div>
       </header>
-      <div className='relative flex flex-col'>
-        <div
-          ref={scrollRef}
-          className="flex justify-around gap-3 w-full overflow-x-auto overflow-y-clip scroll-smooth hide-scrollbar"
-        >
+
+      <div className="overflow-x-auto scroll-smooth hide-scrollbar" ref={scrollRef}>
+        <div className="flex gap-3 w-fit">
           {newArrivals.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

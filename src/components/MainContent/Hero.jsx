@@ -52,20 +52,20 @@ export default function Hero() {
       {/* Navigation buttons */}
       <button
         onClick={prevSlide}
-        className="hidden md:block absolute left-2 top-1/2 -translate-y-1/2 bg-secondary text-white p-1.5 rounded-full cursor-pointer hover:bg-base-1 transition-all duration-300 ease-in-out"
+        className="hidden md:block absolute left-2 top-1/2 -translate-y-1/2 text-base-1 p-2 rounded-full cursor-pointer hover:bg-base-1 hover:text-main transition-all duration-300 ease-in-out"
       >
         <ChevronLeft />
       </button>
       <button
         onClick={nextSlide}
-        className="hidden md:block absolute right-2 top-1/2 -translate-y-1/2 bg-secondary text-white p-1 rounded-full cursor-pointer hover:bg-base-1 transition-all duration-300 ease-in-out"
+        className="hidden md:block absolute right-2 top-1/2 -translate-y-1/2 text-base-1 p-2 rounded-full cursor-pointer hover:bg-base-1 hover:text-main transition-all duration-300 ease-in-out"
       >
         <ChevronRight />
       </button>
 
       {/* Dots Indicator */}
       <div className="flex flex-col items-center justify-center gap-3">
-        <button className="bg-base-1 text-secondary px-6 py-2 rounded-md font-semibold cursor-pointer hover:bg-base-1/70 transition">
+        <button className="bg-base-1 text-main px-6 py-2 rounded-md font-semibold cursor-pointer hover:bg-main hover:text-base-1 transition transtion-all duration-500 ease-in-out">
           Shop Now
         </button>
         <div className="flex gap-2">

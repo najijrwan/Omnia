@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import CategoryScroller from './CategoryScroller';
 import { Link } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function CategoriesWithDetails({ categories, overlayVisible, setOverlayVisible }) {
     const [hoveredCategory, setHoveredCategory] = useState("Electronics"); // default category
@@ -49,11 +50,9 @@ export default function CategoriesWithDetails({ categories, overlayVisible, setO
                         {currentCategory.subcategories.length > 3 && (
                             <button
                                 onClick={() => subScrollRef.current?.scrollBy({ left: -153, behavior: 'smooth' })}
-                                className="bg-base-1 mr-5 rounded-full p-1 z-30 cursor-pointer hover:bg-base-1/70"
+                                className="text-base-1 ml-5 rounded-full p-2 z-30 cursor-pointer hover:bg-base-1 hover:text-main transition-all duration-300 ease-in-out"
                             >
-                                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="3">
-                                    <path d="M15 18l-6-6 6-6" />
-                                </svg>
+                                <ChevronLeft />
                             </button>
                         )}
 
@@ -80,11 +79,9 @@ export default function CategoriesWithDetails({ categories, overlayVisible, setO
                         {currentCategory.subcategories.length > 3 && (
                             <button
                                 onClick={() => subScrollRef.current?.scrollBy({ left: 153, behavior: 'smooth' })}
-                                className="bg-base-1 ml-5 rounded-full p-1 z-30 cursor-pointer hover:bg-base-1/70"
+                                className="text-base-1 ml-5 rounded-full p-2 z-30 cursor-pointer hover:bg-base-1 hover:text-main transition-all duration-300 ease-in-out"
                             >
-                                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="3">
-                                    <path d="M9 18l6-6-6-6" />
-                                </svg>
+                                <ChevronRight />
                             </button>
                         )}
 

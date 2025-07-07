@@ -11,6 +11,9 @@ body {
   --color-secondary: #343330;
   --color-base-1: #F87060;
   --color-base-2: #AA8F76;
+  --color-cards: #F8706010;
+  --color-sections: #AA8F7620;
+  --color-classic: #00000010;
 
   --breakpoint-sm: 580px;
   --breakpoint-2xl: 1700px;
@@ -27,4 +30,22 @@ body {
   /* Firefox */
   -ms-overflow-style: none;
   /* IE 10+ */
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--color-main);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--color-base-1);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-button {
+  height: 0;
+  width: 0;
 }

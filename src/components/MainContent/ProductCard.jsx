@@ -1,7 +1,7 @@
 export default function ProductCard({ product }) {
     return (
         <div className="relative group cursor-pointer text-center mt-6">
-            <div className="relative flex items-center justify-center size-25 z-10 bg-base-1/10 border border-black/10 rounded-full transition-transform duration-500 ease-in-out">
+            <div className="relative flex items-center justify-center size-25 z-10 bg-cards border border-classic rounded-full transition-transform duration-500 ease-in-out">
                 <img
                     src={product.image}
                     alt={product.name}

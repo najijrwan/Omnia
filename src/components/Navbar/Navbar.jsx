@@ -37,13 +37,13 @@ export default function Navbar() {
           </button>
           {/* cart, heart, user, menu icons */}
           <button>
-            <ShoppingCart className="text-base-1" />
+            <ShoppingCart className="text-base-1 cursor-pointer hover:text-main active:text-base-2" />
           </button>
           <button>
-            <Heart className="text-base-1" />
+            <Heart className="text-base-1 cursor-pointer hover:text-main active:text-base-2" />
           </button>
           <button>
-            <CircleUserRound className="text-base-1" />
+            <CircleUserRound className="text-base-1 cursor-pointer hover:text-main active:text-base-2" />
           </button>
         </div>
       </header>
