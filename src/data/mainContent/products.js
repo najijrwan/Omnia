@@ -152,5 +152,41 @@ export const newArrivals = [
         name: "Apple Magic Mouse 3",
         price: "$79.99",
         image: "/productImages/apple-magic-mouse-3.png",
+    },
+    {
+        id: 19,
+        name: "Hugo Boss Perfume",
+        price: "$59.99",
+        image: "/productImages/hugo-boss-perfume.png",
+    },
+    {
+        id: 20,
+        name: "Nike hat",
+        price: "$19.99",
+        image: "/productImages/nike-hat.png",
+    },
+    {
+        id: 21,
+        name: "Ring Light",
+        price: "$24.99",
+        image: "/productImages/ring-light.png",
+    },
+    {
+        id: 22,
+        name: "Canon Camera",
+        price: "$799.99",
+        image: "/productImages/canon-camera.png",
+    },
+    {
+        id: 23,
+        name: "Pantene Shampoo",
+        price: "$14.99",
+        image: "/productImages/pantene-shampoo.png",
+    },
+    {
+        id: 24,
+        name: "Heels",
+        price: "$89.99",
+        image: "/productImages/heels.png",
     }
 ]
