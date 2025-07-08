@@ -116,5 +116,35 @@ export const newArrivals = [
         name: "Asus Laptop",
         price: "$499.99",
         image: "/productImages/asus-laptop.png",
+    },
+    {
+        id: 13,
+        name: "Samsung Galaxy S25",
+        price: "$899.99",
+        image: "/productImages/samsung-galaxy-s25.png",
+    },
+    {
+        id: 14,
+        name: "Samsung Galaxy Watch 8 Ultra",
+        price: "$499.99",
+        image: "/productImages/samsung-galaxy-watch-8-ultra.png",
+    },
+    {
+        id: 15,
+        name: "Jeans",
+        price: "$39.99",
+        image: "/productImages/jeans.png",
+    },
+    {
+        id: 16,
+        name: "Apple Ipad Pro 2025",
+        price: "$1099.99",
+        image: "/productImages/apple-ipad-pro-2025.png",
+    },
+    {
+        id: 17,
+        name: "Apple Headphones Max",
+        price: "$349.99",
+        image: "/productImages/apple-headphones-max.png",
     }
 ]
