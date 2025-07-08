@@ -146,5 +146,11 @@ export const newArrivals = [
         name: "Apple Headphones Max",
         price: "$349.99",
         image: "/productImages/apple-headphones-max.png",
+    },
+    {
+        id: 18,
+        name: "Apple Magic Mouse 3",
+        price: "$79.99",
+        image: "/productImages/apple-magic-mouse-3.png",
     }
 ]
