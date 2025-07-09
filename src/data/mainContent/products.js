@@ -12,36 +12,43 @@ export const products = [
         price: "$59.99",
         image: "https://picsum.photos/200?random=2",
     },
-        {
+    {
         id: 3,
         name: "Running Shoes",
         price: "$59.99",
         image: "https://picsum.photos/200?random=3",
     },
-        {
+    {
         id: 4,
         name: "Running Shoes",
         price: "$59.99",
         image: "https://picsum.photos/200?random=4",
     },
-        {
+    {
         id: 5,
         name: "Running Shoes",
         price: "$59.99",
         image: "https://picsum.photos/200?random=5",
     },
-        {
+    {
         id: 6,
         name: "Running Shoes",
         price: "$59.99",
         image: "https://picsum.photos/200?random=6",
     },
-        {
+    {
         id: 7,
         name: "Running Shoes",
         price: "$59.99",
         image: "https://picsum.photos/200?random=7",
     },
+    {
+        id: 8,
+        name: "Logitech Keyboard",
+        price: "$49.99",
+        image: "/productImages/logitech-keyboard.png",
+        quantitySold: 150,
+    }
 ];
 
 export const newArrivals = [
@@ -188,14 +195,5 @@ export const newArrivals = [
         name: "Heels",
         price: "$89.99",
         image: "/productImages/heels.png",
-    }
-]
-
-export const topSellers = [
-    {
-        id: 1,
-        name: "Logitech Keyboard",
-        price: "$49.99",
-        image: "/productImages/logitech-keyboard.png",
     }
 ]

@@ -1,9 +1,9 @@
 // MainContent.jsx
-import NewArrivals from "./NewArrivals"
 import Hero from "./Hero";
-import TopSellers from "./TopSellers";
-import NewsletterSignup from "./NewsletterSignup";
+import NewArrivals from "./NewArrivals";
 import PromotionBanner from "./PromotionBanner";
+import TopSellings from "./TopSellings";
+import NewsletterSignup from "./NewsletterSignup";
 import HorizontalProductScroller from "./HorizontalProductScroller";
 import Testimonials from "./Testimonials";
 
@@ -13,7 +13,7 @@ export default function MainContent() {
             <Hero />
             <NewArrivals title="New Arrivals" />
             <PromotionBanner />
-            <TopSellers title="Top Sellers"/>
+            <TopSellings title="Top Sellers" />
             <HorizontalProductScroller title="Recommended for You" />
             <Testimonials />
             <NewsletterSignup />

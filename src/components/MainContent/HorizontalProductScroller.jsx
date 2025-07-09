@@ -1,5 +1,5 @@
 import { products } from "../../data/mainContent/products";
-import { ProductCardRounded } from "./ProductCard";
+import { ProductCardRounded } from "./ProductCards";
 
 export default function HorizontalProductScroller({ title = "Recommended for You" }) {
     return (

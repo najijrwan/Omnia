@@ -1,6 +1,6 @@
 // ProductSection.jsx
 import { useRef } from 'react';
-import { ProductCardRounded } from './ProductCard';
+import { ProductCardRounded } from './ProductCards';
 import { newArrivals } from '../../data/mainContent/products';
 import { ChevronLeft, ChevronRight } from "lucide-react";
 

@@ -1,6 +1,6 @@
 import { useRef } from 'react';
-import { ProductCardRectangle } from './ProductCard';
-import { topSellers } from '../../data/mainContent/products';
+import { ProductCardRectangle } from './ProductCards';
+import { products } from '../../data/mainContent/products';
 import { ChevronLeft, ChevronRight } from "lucide-react";
 export default function TopSellers({ title }) {
     const scrollRef = useRef(null);
@@ -14,6 +14,12 @@ export default function TopSellers({ title }) {
             });
         }
     };
+
+    // 👇 Prepare the top 6 best sellers
+    const topSellingProducts = products
+        .filter((product) => product.quantitySold) // only products that have quantitySold defined
+        .sort((a, b) => b.quantitySold - a.quantitySold) // highest sold first
+        .slice(0, 6); // take top 6
 
     return (
         <section className="p-2 mx-4 bg-sections rounded-lg border border-classic">
@@ -37,7 +43,7 @@ export default function TopSellers({ title }) {
 
             <div className="overflow-x-auto scroll-smooth hide-scrollbar" ref={scrollRef}>
                 <div className="flex gap-3 w-fit">
-                    {topSellers.map((product) => (
+                    {topSellingProducts.map((product) => (
                         <ProductCardRectangle key={product.id} product={product} />
                     ))}
                 </div>
