@@ -1,5 +1,5 @@
 import { products } from "../../data/mainContent/products";
-import ProductCard from "./ProductCard";
+import { ProductCardRounded } from "./ProductCard";
 
 export default function HorizontalProductScroller({ title = "Recommended for You" }) {
     return (
@@ -9,7 +9,7 @@ export default function HorizontalProductScroller({ title = "Recommended for You
                 <div className="flex gap-4 w-max">
                     {products.map((product) => (
                         <div key={product.id} className="w-60 flex-shrink-0">
-                            <ProductCard product={product} />
+                            <ProductCardRounded product={product} />
                         </div>
                     ))}
                 </div>

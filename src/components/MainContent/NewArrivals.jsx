@@ -1,10 +1,10 @@
 // ProductSection.jsx
 import { useRef } from 'react';
-import ProductCard from './ProductCard';
-import { products, newArrivals } from '../../data/mainContent/products';
+import { ProductCardRounded } from './ProductCard';
+import { newArrivals } from '../../data/mainContent/products';
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-export default function ProductSection({ title }) {
+export default function NewArrivals({ title }) {
   const scrollRef = useRef(null);
 
   const scroll = (direction) => {
@@ -40,7 +40,7 @@ export default function ProductSection({ title }) {
       <div className="overflow-x-auto scroll-smooth hide-scrollbar" ref={scrollRef}>
         <div className="flex gap-3 w-fit">
           {newArrivals.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCardRounded key={product.id} product={product} />
           ))}
         </div>
       </div>

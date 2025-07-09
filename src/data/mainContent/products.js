@@ -190,3 +190,12 @@ export const newArrivals = [
         image: "/productImages/heels.png",
     }
 ]
+
+export const topSellers = [
+    {
+        id: 1,
+        name: "Logitech Keyboard",
+        price: "$49.99",
+        image: "/productImages/logitech-keyboard.png",
+    }
+]
