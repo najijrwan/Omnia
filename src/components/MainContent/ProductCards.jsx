@@ -19,16 +19,18 @@ export function ProductCardRounded({ product }) {
 
 export function ProductCardRectangle({ product }) {
     return (
-        <div className="border rounded-lg shadow-md hover:shadow-xl transition p-3 bg-white">
-            <img
-                src={product.thumbnail}
-                alt={product.title}
-                className="w-full h-48 object-cover rounded-md"
-            />
-            <div className="mt-3">
-                <h3 className="text-sm font-medium text-gray-800">{product.title}</h3>
-                <p>{product.description}</p>
-                <p className="text-main font-bold mt-1">{product.price}</p>
+        <div className="border border-classic rounded-lg cursor-pointer mt-6">
+            <div className="bg-cards">
+                <img
+                    src={product.thumbnail}
+                    alt={product.title}
+                    className="w-full hover:scale-115 hover:-translate-y-5 transition-all duration-500 ease-in-out"
+                />
+            </div>
+            <div className="flex flex-col justify-center items-start gap-3 mt-3">
+                <h3 className="text-sm font-[900] text-black">{product.title}</h3>
+                <p className="text-xs font-[300] text-black/80">{product.description}</p>
+                <p className="text-black font-bold mt-1">{product.price}</p>
             </div>
         </div>
     );

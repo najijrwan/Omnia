@@ -16,12 +16,10 @@ export default function TopSellings({ title }) {
             <header className='flex items-center justify-between'>
                 <h2 className="text-2xl font-semibold text-base-1">{title}</h2>
             </header>
-            <div className="overflow-x-auto scroll-smooth hide-scrollbar">
-                <div className="flex gap-3 w-fit">
-                    {products.map((product) => (
-                        <ProductCardRectangle key={product.id} product={product} />
-                    ))}
-                </div>
+            <div className="grid grid-cols-2 gap-3">
+                {products.map((product) => (
+                    <ProductCardRectangle key={product.id} product={product} />
+                ))}
             </div>
         </section>
     );
