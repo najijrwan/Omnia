@@ -11,7 +11,7 @@ export function ProductCardRounded({ product }) {
                 />
             </div>
 
-            <h3 className="mt-3 font-semibold text-secondary tracking-wide drop-shadow-sm text-[12px]">
+            <h3 className="mt-3 font-semibold text-base-1 tracking-wide drop-shadow-sm text-[12px]">
                 {product.name}
             </h3>
         </div>
@@ -20,12 +20,12 @@ export function ProductCardRounded({ product }) {
 
 export function ProductCardRectangle({ product }) {
     return (
-        <div className="border border-classic rounded-xl p-1 ">
+        <div className="border border-classic rounded-xl p-1">
             <div className="bg-cards rounded-lg border border-classic">
                 <img
                     src={product.thumbnail}
                     alt={product.title}
-                    className="w-full cursor-pointer hover:scale-115 hover:-translate-y-5 transition-all duration-500 ease-in-out"
+                    className="w-full cursor-pointer hover:scale-200  hover:-translate-y-5 hover:translate-x-15 transition-all duration-500 ease-in-out"
                 />
                 <div className="flex gap-1 items-center p-1">
                     <button>
@@ -37,9 +37,9 @@ export function ProductCardRectangle({ product }) {
                     <p className="text-base-1 text-sm font-bold ml-auto">${product.price}</p>
                 </div>
             </div>
-            <div className="flex flex-col justify-center items-start gap-3 mt-3">
-                <h3 className="text-sm font-[900] text-black">{product.title}</h3>
-                <p className="text-xs font-[300] text-black/80">{product.description}</p>
+            <div className="flex flex-col justify-center items-start gap-1 mt-1 p-1">
+                <h3 className="text-sm font-[900] text-base-1">{product.title}</h3>
+                <p className="text-xs font-[300] text-black/70 ">{product.description}</p>
             </div>
         </div>
     );

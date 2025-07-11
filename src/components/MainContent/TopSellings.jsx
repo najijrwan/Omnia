@@ -12,7 +12,7 @@ export default function TopSellings({ title }) {
     }, []);
 
     return (
-        <section className="p-2 mx-4 bg-sections rounded-lg border border-classic">
+        <section className="p-2 mx-2 bg-sections rounded-lg border border-classic">
             <header className='flex items-center justify-between'>
                 <h2 className="text-2xl font-semibold text-base-1 mb-5">{title}</h2>
             </header>
