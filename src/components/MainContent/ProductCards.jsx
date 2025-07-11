@@ -20,26 +20,26 @@ export function ProductCardRounded({ product }) {
 
 export function ProductCardRectangle({ product }) {
     return (
-        <div className="border border-classic rounded-xl cursor-pointer mt-6 p-1 ">
+        <div className="border border-classic rounded-xl p-1 ">
             <div className="bg-cards rounded-lg border border-classic">
                 <img
                     src={product.thumbnail}
                     alt={product.title}
-                    className="w-full hover:scale-115 hover:-translate-y-5 transition-all duration-500 ease-in-out"
+                    className="w-full cursor-pointer hover:scale-115 hover:-translate-y-5 transition-all duration-500 ease-in-out"
                 />
-                <div>
+                <div className="flex gap-1 items-center p-1">
                     <button>
-                        <ShoppingCart className="cursor-pointer text-base-1 hover:text-main transition-colors duration-300" />
+                        <ShoppingCart size={20} className="cursor-pointer text-base-1 hover:text-main hover:scale-120 hover:-translate-y-1 transition-all duration-300" />
                     </button>
                     <button>
-                        <Heart className="cursor-pointer text-base-1 hover:text-main transition-colors duration-300" />
+                        <Heart size={20} className="cursor-pointer text-base-1 hover:text-main hover:scale-120 hover:-translate-y-1 transition-all duration-300" />
                     </button>
+                    <p className="text-base-1 text-sm font-bold ml-auto">${product.price}</p>
                 </div>
             </div>
             <div className="flex flex-col justify-center items-start gap-3 mt-3">
                 <h3 className="text-sm font-[900] text-black">{product.title}</h3>
                 <p className="text-xs font-[300] text-black/80">{product.description}</p>
-                <p className="text-black font-bold mt-1">{product.price}</p>
             </div>
         </div>
     );
