@@ -13,7 +13,7 @@ export default function MainContent() {
             <Hero />
             <NewArrivals title="New Arrivals" />
             <PromotionBanner />
-            <TopSellings title="Top Sellers" />
+            <TopSellings title="Top Sellings" />
             <HorizontalProductScroller title="Recommended for You" />
             <Testimonials />
             <NewsletterSignup />
