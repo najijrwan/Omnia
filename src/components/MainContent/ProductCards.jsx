@@ -20,12 +20,12 @@ export function ProductCardRounded({ product }) {
 
 export function ProductCardRectangle({ product }) {
     return (
-        <div className="border border-classic rounded-xl p-1">
+        <div className="border border-classic rounded-xl p-1 w-50">
             <div className="bg-cards rounded-lg border border-classic">
                 <img
                     src={product.thumbnail}
                     alt={product.title}
-                    className="w-full cursor-pointer hover:scale-200  hover:-translate-y-5 hover:translate-x-15 transition-all duration-500 ease-in-out"
+                    className="w-full cursor-pointer hover:scale-120  hover:-translate-y-5 transition-all duration-500 ease-in-out"
                 />
                 <div className="flex gap-1 items-center p-1">
                     <button>
