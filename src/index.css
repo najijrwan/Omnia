@@ -18,6 +18,16 @@ body {
 
   --breakpoint-sm: 580px;
   --breakpoint-2xl: 1700px;
+
+  --animate-marquee: marquee 10s linear infinite;
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 /* Hides scrollbar in WebKit-based browsers (Chrome, Safari, Edge) */
@@ -50,3 +60,4 @@ body::-webkit-scrollbar-button {
   height: 0;
   width: 0;
 }
+

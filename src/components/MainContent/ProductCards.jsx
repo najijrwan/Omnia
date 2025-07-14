@@ -18,9 +18,9 @@ export function ProductCardRounded({ product }) {
     );
 }
 
-export function ProductCardRectangle({ product }) {
+export function ProductCardSquared({ product }) {
     return (
-        <div className="border border-classic rounded-xl p-1 w-50">
+        <div className="border border-classic rounded-xl p-1 w-50 mt-6">
             <div className="bg-cards rounded-lg border border-classic">
                 <img
                     src={product.thumbnail}
