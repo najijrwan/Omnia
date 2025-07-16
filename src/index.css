@@ -19,7 +19,7 @@ body {
   --breakpoint-sm: 580px;
   --breakpoint-2xl: 1700px;
 
-  --animate-marquee: marquee 30s linear infinite;
+  --animate-marquee: marquee 25s linear infinite;
 
   @keyframes marquee {
     0% {
