@@ -7,7 +7,7 @@ export default function MaximiseYourSavings({ title }) {
 
     const scroll = (direction) => {
         if (scrollRef.current) {
-            const scrollAmount = 200;
+            const scrollAmount = 750;
             scrollRef.current.scrollBy({
                 left: direction === 'left' ? -scrollAmount : scrollAmount,
                 behavior: 'smooth',
@@ -15,8 +15,8 @@ export default function MaximiseYourSavings({ title }) {
         }
     };
     return (
-        <section className="p-2 mx-2 bg-sections rounded-lg border border-classic">
-            <header className='flex items-center justify-between'>
+        <section className="py-2 mx-2 bg-sections rounded-lg border border-classic">
+            <header className='flex items-center justify-between mb-6 mx-2'>
                 <h2 className="text-2xl font-semibold text-base-1">{title}</h2>
                 <div className='hidden items-center lg:flex'>
                     <button
@@ -33,7 +33,7 @@ export default function MaximiseYourSavings({ title }) {
                     </button>
                 </div>
             </header>
-            <div className="flex gap-3 overflow-x-auto scroll-smooth hide-scrollbar" ref={scrollRef}>
+            <div className="flex gap-5 overflow-x-auto scroll-smooth hide-scrollbar mb-6" ref={scrollRef}>
                 {maximiseYourSavings.map(product => (
                     <PorductCardRectangled key={product.id} product={product} />
                 ))}

@@ -55,22 +55,22 @@ export const maximiseYourSavings = [
     {
         id: 1,
         title: "Up to 50% Off Selected Items",
-        image: "https://picsum.photos/200?random=1",
+        image: "https://picsum.photos/100?random=1",
     },
     {
         id: 2,
         title: "Buy 2 Get 1 Free",
-        image: "https://picsum.photos/200?random=2",
+        image: "https://picsum.photos/100?random=2",
     },
     {
         id: 3,
         title: "Bundle 3 and Save 20%",
-        image: "https://picsum.photos/200?random=3",
+        image: "https://picsum.photos/100?random=3",
     },
     {
         id: 4,
         title: "Home Essentials: Buy More, Pay Less",
-        image: "https://picsum.photos/200?random=4",
+        image: "https://picsum.photos/100?random=4",
     },
     {
         id: 5,

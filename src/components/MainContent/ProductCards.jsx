@@ -47,11 +47,13 @@ export function ProductCardSquared({ product }) {
 
 export function PorductCardRectangled({ product }) {
     return (
-        <div>
-            <img
-                src={product.image}
-                className="w-full cursor-pointer hover:scale-90 transition-all duration-300 ease-in" />
-            <p>{product.title}</p>
+        <div className="flex flex-col items-center gap-2">
+            <div className="w-60 h-40 rounded-xl ml-2">
+                <img
+                    src={product.image}
+                    className="w-full h-[inherit] rounded-[inherit] cursor-pointer hover:scale-95 transition-all duration-300 ease-linear " />
+            </div>
+            <p className="font-[600] text-black ml-2 text-center">{product.title}</p>
         </div>
     );
 }
