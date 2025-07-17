@@ -1,7 +1,7 @@
 export default function FeaturedBrands({ title }) {
 
     return (
-        <section className="py-2 mx-2 bg-sections rounded-lg border border-classic">
+        <section className="py-2 mx-4 bg-sections rounded-lg border border-classic">
             <header className='flex items-center justify-between mx-2'>
                 <h2 className="text-2xl font-semibold text-base-1">{title}</h2>
                 <button className="text-main bg-base-1 py-1 px-3 rounded-lg hover:text-base-1 hover:bg-main cursor-pointer transiton-all duration-300 ease-in-out">

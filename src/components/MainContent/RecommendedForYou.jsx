@@ -1,22 +1,31 @@
-import { useRef } from "react";
+// ProductGrid.jsx
+import React, { useEffect, useState, useRef } from 'react';
+import { ProductCardSquared } from './ProductCards';
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { maximiseYourSavings } from "../../data/mainContent/products";
-import { PorductCardRectangled } from "./ProductCards";
-export default function MaximiseYourSavings({ title }) {
+
+export default function RecommendedForYou({ title }) {
+    const [products, setProducts] = useState([]);
     const scrollRef = useRef(null);
 
     const scroll = (direction) => {
         if (scrollRef.current) {
-            const scrollAmount = 750;
+            const scrollAmount = 200;
             scrollRef.current.scrollBy({
                 left: direction === 'left' ? -scrollAmount : scrollAmount,
                 behavior: 'smooth',
             });
         }
     };
+
+    useEffect(() => {
+        fetch('https://dummyjson.com/products?limit=12')
+            .then(res => res.json())
+            .then(data => setProducts(data.products));
+    }, []);
+
     return (
-        <section className="py-2 mx-4 bg-sections rounded-lg border border-classic">
-            <header className='flex items-center justify-between mb-6 mx-2'>
+        <section className="p-2 mx-4 bg-sections rounded-lg border border-classic">
+            <header className='flex items-center justify-between'>
                 <h2 className="text-2xl font-semibold text-base-1">{title}</h2>
                 <div className='hidden items-center lg:flex'>
                     <button
@@ -33,11 +42,14 @@ export default function MaximiseYourSavings({ title }) {
                     </button>
                 </div>
             </header>
-            <div className="flex gap-3 overflow-x-auto scroll-smooth hide-scrollbar mb-6" ref={scrollRef}>
-                {maximiseYourSavings.map(product => (
-                    <PorductCardRectangled key={product.id} product={product} />
-                ))}
+
+            <div className="overflow-x-auto scroll-smooth hide-scrollbar" ref={scrollRef}>
+                <div className="flex gap-3 w-fit">
+                    {products.map((product) => (
+                        <ProductCardSquared key={product.id} product={product} />
+                    ))}
+                </div>
             </div>
         </section>
     );
-}
+};
