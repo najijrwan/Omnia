@@ -51,6 +51,164 @@ export const products = [
     }
 ];
 
+export const maximiseYourSavings = [
+    {
+        id: 1,
+        title: "Up to 50% Off Selected Items",
+        image: "https://picsum.photos/200?random=1",
+    },
+    {
+        id: 2,
+        title: "Buy 2 Get 1 Free",
+        image: "https://picsum.photos/200?random=2",
+    },
+    {
+        id: 3,
+        title: "Bundle 3 and Save 20%",
+        image: "https://picsum.photos/200?random=3",
+    },
+    {
+        id: 4,
+        title: "Home Essentials: Buy More, Pay Less",
+        image: "https://picsum.photos/200?random=4",
+    },
+    {
+        id: 5,
+        title: "Summer Sale: Cool Prices for Hot Days",
+        image: "https://picsum.photos/200?random=5",
+    },
+    {
+        id: 6,
+        title: "Offer Ends in 2 Hours!",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 7,
+        title: "Trending: Selling Fast!",
+        image: "https://picsum.photos/200?random=5",
+    },
+    {
+        id: 8,
+        title: "Popular Picks Under $50",
+        image: "https://picsum.photos/200?random=5",
+    },
+    {
+        id: 9,
+        title: "Flash Deals: Ends Tonight!",
+        image: "https://picsum.photos/200?random=9",
+    },
+    {
+        id: 10,
+        title: "Back-to-School Savings",
+        image: "https://picsum.photos/200?random=10",
+    },
+    {
+        id: 11,
+        title: "Exclusive Online Discounts",
+        image: "https://picsum.photos/200?random=11",
+    },
+    {
+        id: 12,
+        title: "Sign Up Today — Get 10% Off",
+        image: "https://picsum.photos/200?random=12",
+    },
+    {
+        id: 13,
+        title: "Only 3 Left in Stock!",
+        image: "https://picsum.photos/200?random=13",
+    },
+    {
+        id: 14,
+        title: "Extra Savings on Fashion",
+        image: "https://picsum.photos/200?random=14",
+    },
+    {
+        id: 15,
+        title: "Weekend Mega Sale",
+        image: "https://picsum.photos/200?random=15",
+    },
+    {
+        id: 16,
+        title: "Best Sellers at Lower Prices",
+        image: "https://picsum.photos/200?random=16",
+    },
+    {
+        id: 17,
+        title: "Get More, Pay Less",
+        image: "https://picsum.photos/200?random=17",
+    },
+    {
+        id: 18,
+        title: "Deals of the Day",
+        image: "https://picsum.photos/200?random=18",
+    },
+    {
+        id: 19,
+        title: "Clearance Sale: Up to 70% Off",
+        image: "https://picsum.photos/200?random=19",
+    },
+    {
+        id: 20,
+        title: "Editors' Picks for Big Savings",
+        image: "https://picsum.photos/200?random=20",
+    },
+    {
+        id: 21,
+        title: "Seasonal Offers You’ll Love",
+        image: "https://picsum.photos/200?random=21",
+    },
+    {
+        id: 22,
+        title: "Your Wallet Will Thank You",
+        image: "https://picsum.photos/200?random=22",
+    },
+    {
+        id: 23,
+        title: "Daily Deals for Smart Shoppers",
+        image: "https://picsum.photos/200?random=23",
+    },
+    {
+        id: 24,
+        title: "End of Season Clearance",
+        image: "https://picsum.photos/200?random=24",
+    },
+    {
+        id: 25,
+        title: "Home Favorites on Sale",
+        image: "https://picsum.photos/200?random=25",
+    },
+    {
+        id: 26,
+        title: "Gifts Under $25",
+        image: "https://picsum.photos/200?random=26",
+    },
+    {
+        id: 27,
+        title: "Exclusive Offers for You",
+        image: "https://picsum.photos/200?random=27",
+    },
+    {
+        id: 28,
+        title: "Deal Hunters' Paradise",
+        image: "https://picsum.photos/200?random=28",
+    },
+    {
+        id: 29,
+        title: "Shop More, Save More",
+        image: "https://picsum.photos/200?random=29",
+    },
+    {
+        id: 30,
+        title: "Top-Rated Products on Sale",
+        image: "https://picsum.photos/200?random=30",
+    },
+    {
+        id: 31,
+        title: "Final Call: Big Savings",
+        image: "https://picsum.photos/200?random=31",
+    },
+]
+
 export const newArrivals = [
     {
         id: 1,

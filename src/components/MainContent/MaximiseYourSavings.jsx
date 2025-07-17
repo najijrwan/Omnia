@@ -1,5 +1,7 @@
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { maximiseYourSavings } from "../../data/mainContent/products";
+import { PorductCardRectangled } from "./ProductCards";
 export default function MaximiseYourSavings({ title }) {
     const scrollRef = useRef(null);
 
@@ -31,8 +33,10 @@ export default function MaximiseYourSavings({ title }) {
                     </button>
                 </div>
             </header>
-            <div className="overflow-x-auto scroll-smooth hide-scrollbar" ref={scrollRef}>
-
+            <div className="flex gap-3 overflow-x-auto scroll-smooth hide-scrollbar" ref={scrollRef}>
+                {maximiseYourSavings.map(product => (
+                    <PorductCardRectangled key={product.id} product={product} />
+                ))}
             </div>
         </section>
     );

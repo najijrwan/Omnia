@@ -44,3 +44,14 @@ export function ProductCardSquared({ product }) {
         </div>
     );
 }
+
+export function PorductCardRectangled({ product }) {
+    return (
+        <div>
+            <img
+                src={product.image}
+                className="w-full cursor-pointer hover:scale-90 transition-all duration-300 ease-in" />
+            <p>{product.title}</p>
+        </div>
+    );
+}
