@@ -7,7 +7,10 @@ import RecommendedForYou from "./RecommendedForYou";
 import FeaturedBrands from "./FeaturedBrands";
 import MaximiseYourSavings from "./MaximiseYourSavings";
 import Electronics from "./Electronics";
-import MensFashion from "./MensFashion"
+import MensFashion from "./MensFashion";
+import WomensFashion from "./WomensFashion";
+import KidsFashion from "./KidsFashion";
+import HomeAndKitchen from "./HomeAndKitchen";
 import NewsletterSignup from "./NewsletterSignup";
 import Testimonials from "./Testimonials";
 
@@ -23,6 +26,9 @@ export default function MainContent() {
             <MaximiseYourSavings title="MaximiseYourSavings" />
             <Electronics title="Electronics" />
             <MensFashion title="Men's Fashion" />
+            <WomensFashion title="Women's Fashion" />
+            <KidsFashion title="Kid's Fashion" />
+            <HomeAndKitchen title="Home & Kitchen" />
             <Testimonials />
             <NewsletterSignup />
         </main>

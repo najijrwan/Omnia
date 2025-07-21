@@ -395,5 +395,112 @@ export const mensFashion = [
         title: "Spring/Summer",
         image: "https://picsum.photos/200?random=1",
     },
-    
+    {
+        id: 2,
+        title: "Footwear",
+        image: "https://picsum.photos/200?random=2",
+    },
+    {
+        id: 3,
+        title: "Bags & Accessories",
+        image: "https://picsum.photos/200?random=3",
+    },
+    {
+        id: 4,
+        title: "Formal Wear",
+        image: "https://picsum.photos/200?random=4",
+    },
+    {
+        id: 5,
+        title: "Casual Wear",
+        image: "https://picsum.photos/200?random=5",
+    },
+]
+
+export const womensFashion = [
+    {
+        id: 1,
+        title: "Clothing",
+        image: "https://picsum.photos/200?random=1",
+    },
+    {
+        id: 2,
+        title: "Shoes",
+        image: "https://picsum.photos/200?random=2",
+    },
+    {
+        id: 3,
+        title: "Accessories",
+        image: "https://picsum.photos/200?random=3",
+    },
+    {
+        id: 4,
+        title: "Lingerie & Sleepwear",
+        image: "https://picsum.photos/200?random=4",
+    },
+    {
+        id: 5,
+        title: "Beauty",
+        image: "https://picsum.photos/200?random=5",
+    },
+]
+
+export const kidsFashion = [
+    {
+        id: 1,
+        title: "Clothing",
+        image: "https://picsum.photos/200?random=1",
+    },
+    {
+        id: 2,
+        title: "Shoes",
+        image: "https://picsum.photos/200?random=2",
+    },
+    {
+        id: 3,
+        title: "Accessories",
+        image: "https://picsum.photos/200?random=3",
+    },
+    {
+        id: 4,
+        title: "Baby & Toddler",
+        image: "https://picsum.photos/200?random=4",
+    },
+    {
+        id: 5,
+        title: "Seasonal Wear",
+        image: "https://picsum.photos/200?random=5",
+    },
+]
+export const homeAndKitchen = [
+    {
+        id: 1,
+        title: "Furniture",
+        image: "https://picsum.photos/200?random=1",
+    },
+    {
+        id: 2,
+        title: "Kitchenware",
+        image: "https://picsum.photos/200?random=2",
+    },
+    {
+        id: 3,
+        title: "Home Décor",
+        image: "https://picsum.photos/200?random=3",
+    },
+    {
+        id: 4,
+        title: "Appliances",
+        image: "https://picsum.photos/200?random=4",
+    },
+    {
+        id: 5,
+        title: "Bedding & Bath",
+        image: "https://picsum.photos/200?random=5",
+    },
+    {
+        id: 6,
+        title: "Cleaning Supplies",
+        image: "https://picsum.photos/200?random=6",
+    }
 ]
