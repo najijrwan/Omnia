@@ -27,10 +27,6 @@ export const categories = [
                 title: "Cameras & Photography",
                 items: ["DSLR Cameras", "Mirrorless Cameras", "Action Cameras", "Tripods", "Camera Lenses", "Camera Bags"]
             },
-            {
-                title: "demo",
-                items: ["DSLR Cameras", "Mirrorless Cameras", "Action Cameras", "Tripods", "Camera Lenses", "Camera Bags"]
-            }
         ]
     },
     {

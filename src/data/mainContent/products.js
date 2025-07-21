@@ -355,3 +355,45 @@ export const newArrivals = [
         image: "/productImages/heels.png",
     }
 ]
+
+export const electronics = [
+    {
+        id: 1,
+        title: "Mobile & Tablet Devices",
+        image: "https://picsum.photos/200?random=1",
+    },
+    {
+        id: 2,
+        title: "Smartwatches & Wearables",
+        image: "https://picsum.photos/200?random=2",
+    },
+    {
+        id: 3,
+        title: "Laptops & Desktops",
+        image: "https://picsum.photos/200?random=3",
+    },
+    {
+        id: 4,
+        title: "Accessories",
+        image: "https://picsum.photos/200?random=4",
+    },
+    {
+        id: 5,
+        title: "Audio & Headphones",
+        image: "https://picsum.photos/200?random=5",
+    },
+    {
+        id: 6,
+        title: "Cameras & Photography",
+        image: "https://picsum.photos/200?random=6",
+    },
+]
+
+export const mensFashion = [
+    {
+        id: 1,
+        title: "Spring/Summer",
+        image: "https://picsum.photos/200?random=1",
+    },
+    
+]

@@ -6,8 +6,9 @@ import TopSellings from "./TopSellings";
 import RecommendedForYou from "./RecommendedForYou";
 import FeaturedBrands from "./FeaturedBrands";
 import MaximiseYourSavings from "./MaximiseYourSavings";
+import Electronics from "./Electronics";
+import MensFashion from "./MensFashion"
 import NewsletterSignup from "./NewsletterSignup";
-import HorizontalProductScroller from "./HorizontalProductScroller";
 import Testimonials from "./Testimonials";
 
 export default function MainContent() {
@@ -20,7 +21,8 @@ export default function MainContent() {
             <RecommendedForYou title="Recommended For Youa" />
             <FeaturedBrands title="Featured Brands"/>
             <MaximiseYourSavings title="MaximiseYourSavings" />
-            <HorizontalProductScroller title="Recommended for You" />
+            <Electronics title="Electronics" />
+            <MensFashion title="Men's Fashion" />
             <Testimonials />
             <NewsletterSignup />
         </main>
