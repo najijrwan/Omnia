@@ -575,3 +575,178 @@ export const baby = [
         image: "https://picsum.photos/200?random=6",
     }
 ]
+
+export const sportAndOUtdoors = [
+    {
+        id: 1,
+        title: "Fitness Equipment",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 2,
+        title: "Outdoor Recreation",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 3,
+        title: "Team Sports",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 4,
+        title: "Water Sports",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 5,
+        title: "Cycling",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 6,
+        title: "Running & Training",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 7,
+        title: "Winter Sports",
+        image: "https://picsum.photos/200?random=6",
+    }
+]
+
+export const healthAndNutrition = [
+    {
+        id: 1,
+        title: "Supplements",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 2,
+        title: "Healthy Foods",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 3,
+        title: "Fitness Nurtition",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 4,
+        title: "Personal Health",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 5,
+        title: "Natural Remedies",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 6,
+        title: "Weight Management",
+        image: "https://picsum.photos/200?random=6",
+    }
+]
+
+export const automative = [
+    {
+        id: 1,
+        title: "Car Accessories",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 2,
+        title: "Exterior Parts",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 3,
+        title: "Interior Parts",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 4,
+        title: "Replacement Parts",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 5,
+        title: "Car Care",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 6,
+        title: "Tools & Equipment",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 7,
+        title: "Motor Oils & Fluids",
+        image: "https://picsum.photos/200?random=6",
+    }
+]
+
+export const stationary = [
+    {
+        id: 1,
+        title: "Writing Instruments",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 2,
+        title: "Paper Products",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 3,
+        title: "Organizers & Files",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 4,
+        title: "Desk Supplies",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 5,
+        title: "Art & Craft",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 6,
+        title: "School Essentials",
+        image: "https://picsum.photos/200?random=6",
+    }
+]
+
+export const booksAndMedia = [
+    {
+        id: 1,
+        title: "Books",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 2,
+        title: "Magazines & Journals",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 3,
+        title: "E-Books",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 4,
+        title: "Music",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 5,
+        title: "Movies & TV",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 6,
+        title: "Educational Media",
+        image: "https://picsum.photos/200?random=6",
+    },
+]

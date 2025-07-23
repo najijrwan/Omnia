@@ -13,6 +13,11 @@ import KidsFashion from "./KidsFashion";
 import HomeAndKitchen from "./HomeAndKitchen";
 import BeautyAndFragnance from "./BeautyAndFragnance";
 import Baby from "./Baby";
+import SportAndOutdoors from "./SportAndOutdoor";
+import HealthAndNutrition from "./HealthAndNutrition";
+import Automative from "./Automative";
+import Stationary from "./Stationary";
+import BooksAndMedia from "./BooksAndMedia";
 import NewsletterSignup from "./NewsletterSignup";
 import Testimonials from "./Testimonials";
 
@@ -33,6 +38,11 @@ export default function MainContent() {
             <HomeAndKitchen title="Home & Kitchen" />
             <BeautyAndFragnance title="Beauty & Fragnance" />
             <Baby title="Baby" />
+            <SportAndOutdoors title="Sports & Outdoors" />
+            <HealthAndNutrition title="Health & Nutrition" />
+            <Automative title="Automative" />
+            <Stationary title="Stationary" />
+            <BooksAndMedia title="Books & Media" />
             <Testimonials />
             <NewsletterSignup />
         </main>
