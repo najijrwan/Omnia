@@ -43,7 +43,7 @@ export default function MainContent() {
             <Automative title="Automative" />
             <Stationary title="Stationary" />
             <BooksAndMedia title="Books & Media" />
-            <Testimonials />
+            <Testimonials title="What Our Visitors Say"/>
             <NewsletterSignup />
         </main>
     );
