@@ -11,6 +11,8 @@ import MensFashion from "./MensFashion";
 import WomensFashion from "./WomensFashion";
 import KidsFashion from "./KidsFashion";
 import HomeAndKitchen from "./HomeAndKitchen";
+import BeautyAndFragnance from "./BeautyAndFragnance";
+import Baby from "./Baby";
 import NewsletterSignup from "./NewsletterSignup";
 import Testimonials from "./Testimonials";
 
@@ -29,6 +31,8 @@ export default function MainContent() {
             <WomensFashion title="Women's Fashion" />
             <KidsFashion title="Kid's Fashion" />
             <HomeAndKitchen title="Home & Kitchen" />
+            <BeautyAndFragnance title="Beauty & Fragnance" />
+            <Baby title="Baby" />
             <Testimonials />
             <NewsletterSignup />
         </main>

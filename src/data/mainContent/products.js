@@ -504,3 +504,74 @@ export const homeAndKitchen = [
         image: "https://picsum.photos/200?random=6",
     }
 ]
+
+export const beautyAndFragnance = [
+    {
+        id: 1,
+        title: "Makeup",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 2,
+        title: "Skincare",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 3,
+        title: "Fragnances",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 4,
+        title: "Haircare",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 5,
+        title: "Bath & Body",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 6,
+        title: "Men's Grooming",
+        image: "https://picsum.photos/200?random=6",
+    }
+]
+
+export const baby = [
+    {
+        id: 1,
+        title: "Clothing",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 2,
+        title: "Footwear",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 3,
+        title: "Nursery",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 4,
+        title: "Feeding",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 5,
+        title: "Bath & Skincare",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 6,
+        title: "Travel Gear",
+        image: "https://picsum.photos/200?random=6",
+    },
+    {
+        id: 7,
+        title: "Toys & Learning",
+        image: "https://picsum.photos/200?random=6",
+    }
+]
