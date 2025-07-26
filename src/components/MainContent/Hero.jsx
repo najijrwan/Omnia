@@ -1,82 +1,70 @@
-import { useState, useRef } from "react";
-import { features } from "../../data/mainContent/features";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
+import { ads } from "../../data/navBar/ads";
 
 export default function Hero() {
-  const [index, setIndex] = useState(0);
-  const touchStartX = useRef(null);
-  const touchEndX = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextSlide = () => {
-    setIndex((prev) => (prev + 1) % features.length);
-  };
+  // Auto-slide every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === ads.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 8000);
 
-  const prevSlide = () => {
-    setIndex((prev) => (prev - 1 + features.length) % features.length);
-  };
-
-  const handleTouchStart = (e) => {
-    touchStartX.current = e.touches[0].clientX;
-  };
-
-  const handleTouchEnd = (e) => {
-    touchEndX.current = e.changedTouches[0].clientX;
-    handleSwipe();
-  };
-
-  const handleSwipe = () => {
-    const delta = touchStartX.current - touchEndX.current;
-    if (Math.abs(delta) < 50) return; // ignore small swipes
-    if (delta > 0) nextSlide();       // swipe left
-    else prevSlide();                 // swipe right
-  };
+    return () => clearInterval(interval); // cleanup
+  }, []);
 
   return (
-    <section
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
-      className=" 
-        relative flex flex-col items-center justify-between text-center w-full h-[260px] p-5 bg-secondary border-b border-b-base-2/50 overflow-hidden"
-    >
+    <section className="w-full p-2 text-center">
 
-      {/* Feature content */}
-      <div className="transition-all duration-500 max-w-2xl px-5">
-        <h1 className="text-[30px] text-base-1 font-extrabold sm:text-[35px]">
-          {features[index].title}
-        </h1>
-        <p className="text-[15px] text-main mt-2 sm:text-[17.5px]">
-          {features[index].description}
-        </p>
+      {/* Carousel Section */}
+      <div className="relative w-full max-w-xl mx-auto">
+        {/* Image */}
+        <img
+          src={ads[currentIndex].image}
+          alt={ads[currentIndex].title}
+          className="w-full h-56 object-cover rounded-lg shadow-md transition-all duration-700"
+        />
+
+        {/* Title overlay */}
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-base-1/60 text-white py-2 px-4 rounded-lg">
+          <h3 className="text-lg font-semibold">{ads[currentIndex].title}</h3>
+          <p className="text-sm">{ads[currentIndex].subtitle}</p>
+        </div>
+
+        {/* Navigation buttons */}
+        <button
+          onClick={() =>
+            setCurrentIndex(
+              currentIndex === 0 ? ads.length - 1 : currentIndex - 1
+            )
+          }
+          className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60 cursor-pointer"
+        >
+          ◀
+        </button>
+        <button
+          onClick={() =>
+            setCurrentIndex(
+              currentIndex === ads.length - 1 ? 0 : currentIndex + 1
+            )
+          }
+          className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60 cursor-pointer"
+        >
+          ▶
+        </button>
       </div>
 
-      {/* Navigation buttons */}
-      <button
-        onClick={prevSlide}
-        className="hidden md:block absolute left-2 top-1/2 -translate-y-1/2 text-base-1 p-2 rounded-full cursor-pointer hover:bg-base-1 hover:text-main transition-all duration-300 ease-in-out"
-      >
-        <ChevronLeft />
-      </button>
-      <button
-        onClick={nextSlide}
-        className="hidden md:block absolute right-2 top-1/2 -translate-y-1/2 text-base-1 p-2 rounded-full cursor-pointer hover:bg-base-1 hover:text-main transition-all duration-300 ease-in-out"
-      >
-        <ChevronRight />
-      </button>
-
-      {/* Dots Indicator */}
-      <div className="flex flex-col items-center justify-center gap-3">
-        <button className="bg-base-1 text-main px-6 py-2 rounded-md font-semibold cursor-pointer hover:bg-main hover:text-base-1 transition transtion-all duration-500 ease-in-out">
-          Shop Now
-        </button>
-        <div className="flex gap-2">
-          {features.map((_, i) => (
-            <span
-              key={i}
-              className={`w-3 h-3 rounded-full border border-base-1 transition ${i === index ? "bg-base-1" : "bg-transparent"
-                }`}
-            />
-          ))}
-        </div>
+      {/* Dots indicator */}
+      <div className="flex justify-center mt-4 space-x-2">
+        {ads.map((_, index) => (
+          <span
+            key={index}
+            className={`w-3 h-3 rounded-full ${index === currentIndex ? "bg-base-1" : "bg-gray-400"
+              }`}
+          />
+        ))}
       </div>
     </section>
   );
