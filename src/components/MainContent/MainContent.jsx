@@ -23,7 +23,7 @@ import Testimonials from "./Testimonials";
 
 export default function MainContent() {
     return (
-        <main className="flex flex-col gap-5">
+        <main className="flex flex-col gap-5 w-full">
             <Hero />
             <NewArrivals title="New Arrivals" />
             <PromotionBanner />

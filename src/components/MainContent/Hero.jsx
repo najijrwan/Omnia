@@ -16,15 +16,15 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="w-full p-2 text-center">
+    <section className="w-full text-center">
 
       {/* Carousel Section */}
-      <div className="relative w-full max-w-xl mx-auto">
+      <div className="relative w-full">
         {/* Image */}
         <img
           src={ads[currentIndex].image}
           alt={ads[currentIndex].title}
-          className="w-full h-56 object-cover rounded-lg shadow-md transition-all duration-700"
+          className="w-full h-56 object-cover shadow-md transition-all duration-700"
         />
 
         {/* Title overlay */}
@@ -61,7 +61,7 @@ export default function Hero() {
         {ads.map((_, index) => (
           <span
             key={index}
-            className={`w-3 h-3 rounded-full ${index === currentIndex ? "bg-base-1" : "bg-gray-400"
+            className={`w-5 h-1 ${index === currentIndex ? "bg-base-1" : "bg-gray-400"
               }`}
           />
         ))}
