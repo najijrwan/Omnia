@@ -6,18 +6,17 @@ import SearchBar from "./SearchBar";
 import Sidebar from "./Sidebar";
 import CategoriesWithDetails from './CategoriesWithDetails';
 
-import { CircleUserRound, Search, Menu, ShoppingCart, Heart } from 'lucide-react';
+import { Menu } from 'lucide-react';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState(null);
   const [overlayVisible, setOverlayVisible] = useState(false);
 
   return (
     <>
-      <header className="relative bg-secondary px-4 py-3 flex items-center sm:justify-around sm:gap-10 text-white border-b border-base-2/50 z-30">
-        <div className="flex items-center gap-5">
+      <header className="relative bg-main px-4 py-3 flex items-center sm:justify-around sm:gap-10 text-white border-b border-base-2/50 z-30">
+        <div className="flex items-center gap-2">
           <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
             {/* menu icon svg */}
             <Menu className="text-base-1" />
@@ -27,25 +26,8 @@ export default function Navbar() {
           </div>
         </div>
 
-        <SearchBar searchOpen={searchOpen} setSearchOpen={setSearchOpen} />
+        <SearchBar />
 
-        <div className="flex items-center gap-4 ml-auto sm:ml-0">
-          {/* Insert IconButton here or inline svg as needed */}
-          <button onClick={() => setSearchOpen(!searchOpen)} className="sm:hidden">
-            {/* search icon svg */}
-            <Search className="text-base-1" />
-          </button>
-          {/* cart, heart, user, menu icons */}
-          <button>
-            <ShoppingCart className="text-base-1 cursor-pointer hover:text-main active:text-base-2" />
-          </button>
-          <button>
-            <Heart className="text-base-1 cursor-pointer hover:text-main active:text-base-2" />
-          </button>
-          <button>
-            <CircleUserRound className="text-base-1 cursor-pointer hover:text-main active:text-base-2" />
-          </button>
-        </div>
       </header>
 
       <CategoriesWithDetails
@@ -53,12 +35,11 @@ export default function Navbar() {
         overlayVisible={overlayVisible}
         setOverlayVisible={setOverlayVisible} />
 
-      {(menuOpen || searchOpen || overlayVisible) && (
+      {(menuOpen || overlayVisible) && (
         <div
           className="fixed top-0 left-0 w-full h-full bg-white/10 z-10 backdrop-blur-[6px]"
           onClick={() => {
             setMenuOpen(false);
-            setSearchOpen(false);
             setOverlayVisible(false);
           }}
         />

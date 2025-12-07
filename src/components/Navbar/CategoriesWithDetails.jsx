@@ -4,8 +4,8 @@ import { Link } from 'lucide-react';
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function CategoriesWithDetails({ categories, overlayVisible, setOverlayVisible }) {
-    const [hoveredCategory, setHoveredCategory] = useState("Electronics"); // default category
-    const [lockDisplay, setLockDisplay] = useState(true); // control to persist main on hover
+    const [hoveredCategory, setHoveredCategory] = useState("Electronics");
+    const [lockDisplay, setLockDisplay] = useState(true);
     const subScrollRef = useRef();
 
 
@@ -23,7 +23,7 @@ export default function CategoriesWithDetails({ categories, overlayVisible, setO
         } else {
             setOverlayVisible(false);
         }
-    }, [lockDisplay, currentCategory]); // ✅ correct: no trailing comma
+    }, [lockDisplay, currentCategory]);
 
 
     return (
@@ -43,7 +43,7 @@ export default function CategoriesWithDetails({ categories, overlayVisible, setO
 
             {currentCategory && lockDisplay && (
                 <main
-                    className="bg-secondary absolute w-full h-[70vh] rounded-b-3xl p-4 flex gap-10 shadow-2xl overflow-hidden">
+                    className="bg-main absolute w-full h-[70vh] rounded-b-3xl p-4 flex gap-10 shadow-2xl overflow-hidden">
 
                     {/* Subcategories Scroller */}
                     <div className="relative w-[515px] h-full flex justify-start items-start flex-grow lg:w-[670px] xl:w-[820px] 2xl:w-full!">
@@ -89,7 +89,7 @@ export default function CategoriesWithDetails({ categories, overlayVisible, setO
 
                     {/* Sidebar */}
                     <aside className='text-center '>
-                        <img src={currentCategory.image} alt={currentCategory.title} className="rounded-xl block max-h-[300px]" />
+                        <img src={currentCategory.image} alt={currentCategory.title} className="rounded-xl max-h-[300px]" />
                         <h1 className="text-2xl font-bold text-base-1 mt-2">{currentCategory.title}</h1>
                     </aside>
                 </main>

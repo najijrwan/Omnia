@@ -6,8 +6,7 @@ body {
 }
 
 @theme {
-  --color-white: #FFFFFF;
-  --color-main: #FCD8B4;
+  --color-main: #FFFFFF;
   --color-secondary: #343330;
   --color-base-1: #F87060;
   --color-base-2: #AA8F76;

@@ -6,7 +6,7 @@ export default function Sidebar({ categories, menuOpen, activeCategory, setActiv
     };
 
     return (
-        <div className={`fixed top-0 left-0 h-full w-[70vw] bg-secondary transition-all duration-300 ease-in-out z-30 overflow-y-scroll ${menuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+        <div className={`fixed top-0 left-0 h-full w-[70vw] bg-main transition-all duration-300 ease-in-out z-30 overflow-y-scroll ${menuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
             <button onClick={() => setMenuOpen(false)} className='absolute right-2 top-2'>
                 <X className='text-main' />
             </button>
@@ -21,12 +21,7 @@ export default function Sidebar({ categories, menuOpen, activeCategory, setActiv
 
                         {activeCategory === category.title && (
                             <div className="mt-2 pl-4 flex flex-col gap-3">
-                                <aside className='border-base-1 w-full border rounded-lg flex-shrink-0 '>
-                                    <div className='border-b border-b-base-1'>
-                                        <img src={category.image} alt={category.title} className="rounded-tr-lg rounded-tl-lg object-cover size-full" />
-                                    </div>
-                                    <p className="text-secondary bg-main rounded-br-[inherit] rounded-bl-[inherit] text-sm p-2">{category.description}</p>
-                                </aside>
+                                <p className="text-secondary bg-main rounded-br-[inherit] rounded-bl-[inherit] text-sm p-2">{category.description}</p>
                                 {category.subcategories.map((sub) => (
                                     <div key={sub.title}>
                                         <p className="font-[300] text-main">{sub.title}</p>

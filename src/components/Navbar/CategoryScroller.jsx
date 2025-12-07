@@ -12,8 +12,8 @@ export default function CategoryScroller({ categories, onHoverCategory, activeCa
 
     return (
         <header className="">
-            <button onClick={() => scroll('left')} className="absolute left-0 top-1/2 -translate-y-1/2 bg-gradient-to-r from-base-1 to-transparent px-2 h-full">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="3"><path d="M15 18l-6-6 6-6" /></svg>
+            <button onClick={() => scroll('left')} className="absolute left-0 top-1/2 -translate-y-1/2 bg-gradient-to-r from-white to-transparent px-2 h-full">
+                <svg className="w-6 h-6 text-secondary" fill="none" stroke="currentColor" strokeWidth="3"><path d="M15 18l-6-6 6-6" /></svg>
             </button>
 
             <button onClick={() => scroll('right')} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gradient-to-l from-base-1 to-transparent px-2 h-full">
