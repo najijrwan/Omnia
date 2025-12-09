@@ -5,6 +5,7 @@ import { categories } from "../../data/navBar/categories";
 import SearchBar from "./SearchBar";
 import Sidebar from "./Sidebar";
 import CategoriesWithDetails from './CategoriesWithDetails';
+import { ShoppingCart, CircleUserRound, Bookmark } from 'lucide-react';
 
 import { Menu } from 'lucide-react';
 
@@ -15,18 +16,30 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="relative bg-main px-4 py-3 flex items-center sm:justify-around sm:gap-10 text-white border-b border-base-2/50 z-30">
-        <div className="flex items-center gap-2">
-          <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
-            {/* menu icon svg */}
-            <Menu className="text-base-1" />
-          </button>
-          <div className='relative flex items-center h-11'>
-            <Link to="/" className="font-bold text-xl text-base-1 block"><i>Omnia</i></Link>
-          </div>
-        </div>
+      <header className="
+      relative h-[65px] bg-main py-3 px-2 2xl:px-40 flex flex-row justify-center items-center gap-7 md:gap-5 lg:gap-0 text-white border-b border-base-2/50 transition-all ease-in-out duration-500">
 
-        <SearchBar />
+        <Link to="/" className="font-bold text-xl text-base-1 hover:opacity-70 mr-auto md:ml-3"><i>Omnia</i></Link>
+<SearchBar />
+        <ul className="hidden h-full lg:flex absolute items-center gap-7 text-base-1 font-extrabold">
+          <li className="flex items-center cursor-pointer hover:border-b-base-1 hover:border-b-2 box-border"><span>About</span></li>
+          <li>Support</li>
+          <li>Follow Us</li>
+          <li>Company</li>
+        </ul>
+
+        
+
+        <ul className='hidden md:flex ml-2  text-base-1 font-extrabold'>
+          <li><button className="p-1.5 rounded-full hover:bg-base-1/30 cursor-pointer transition-all ease-in-out duration-150"><Bookmark className='inline size-7' /></button></li>
+          <li><button className="p-1.5 rounded-full hover:bg-base-1/30 cursor-pointer transition-all ease-in-out duration-150"><ShoppingCart className='inline size-7' /></button></li>
+          <li><button className="p-1.5 rounded-full hover:bg-base-1/30 cursor-pointer transition-all ease-in-out duration-150"><CircleUserRound className='inline size-7' /></button></li>
+        </ul>
+
+        <button className="lg:hidden md:mr-3" onClick={() => setMenuOpen(!menuOpen)}>
+          {/* menu icon svg */}
+          <Menu className="text-base-1 size-7" />
+        </button>
 
       </header>
 
@@ -35,9 +48,9 @@ export default function Navbar() {
         overlayVisible={overlayVisible}
         setOverlayVisible={setOverlayVisible} />
 
-      {(menuOpen || overlayVisible) && (
+      {(menuOpen) && (
         <div
-          className="fixed top-0 left-0 w-full h-full bg-white/10 z-10 backdrop-blur-[6px]"
+          className="fixed top-0 left-0 w-full h-full bg-white/10 z-20 backdrop-blur-[7px]"
           onClick={() => {
             setMenuOpen(false);
             setOverlayVisible(false);

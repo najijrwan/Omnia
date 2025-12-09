@@ -31,7 +31,7 @@ export default function CategoriesWithDetails({ categories, overlayVisible, setO
             onMouseEnter={handleEnter}
             onMouseLeave={handleLeave}
             className="
-                relative hidden md:block bg-main border-b border-b-secondary/30 z-20">
+                relative hidden w-full md:block bg-main border-b border-b-secondary/30 z-20">
 
             <CategoryScroller
                 categories={categories}

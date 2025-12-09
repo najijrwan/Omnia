@@ -4,26 +4,30 @@ import InstagramIcon from '../../assets/instagram.svg?react';
 import FacebookIcon from '../../assets/facebook.svg?react';
 import XIcon from '../../assets/x.svg?react';
 import WhatsappIcon from '../../assets/whatsapp.svg?react';
-export default function Sidebar({ categories, menuOpen, activeCategory, setActiveCategory, setMenuOpen }) {
+export default function Sidebar({ categories, menuOpen, setMenuOpen, activeCategory, setActiveCategory }) {
     const handleClick = (title) => {
         setActiveCategory((prev) => (prev === title ? null : title));
     };
 
     return (
-        <div className={`fixed top-0 left-0 h-full w-[70vw] bg-main transition-all duration-300 ease-in-out z-30 overflow-y-scroll ${menuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-            <button onClick={() => setMenuOpen(false)} className='absolute left-4 top-3 size-12'>
-                <X className='text-base-1 size-7' />
-            </button>
-            <ul className='flex gap-3 flex-row-reverse py-5 px-4 text-base-1'>
-                <li><Bookmark className='inline mr-2 size-7' /></li>
-                <li><ShoppingCart className='inline mr-2 size-7' /></li>
-                <li><CircleUserRound className='inline mr-2 size-7' /></li>
-            </ul>
+        <div className={`fixed top-0 right-0 h-full w-[70vw] bg-main transition-all duration-300 ease-in-out z-30 overflow-y-scroll ${menuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+            <header className='flex items-center p-3 pr-2 h-[65px]'>
+                <button className='mr-auto' onClick={() => setMenuOpen(false)}>
+                    <X className='text-base-1 size-7' />
+                </button>
+                <ul className='flex md:hidden gap-3 flex-row text-base-1'>
+                    <li><Bookmark className='inline size-7' /></li>
+                    <li><ShoppingCart className='inline size-7' /></li>
+                    <li><CircleUserRound className='inline size-7' /></li>
+                </ul>
+            </header>
+
             <div className='w-full h-px bg-secondary/30'></div>
+
             <ul className="flex flex-col">
                 {categories.map((category) => (
 
-                    <li key={category.title} className={`p-2.5 not-last:border-b border-secondary/10 ${activeCategory === category.title ? "bg-gray-50" : ""}`}>
+                    <li key={category.title} className={`p-2.5 not-last:border-b border-secondary/10 ${activeCategory === category.title ? "bg-gray-100" : ""}`}>
                         <button className="flex w-full items-center justify-between " onClick={() => handleClick(category.title)}>
                             <p className="font-semibold text-base-1">{category.title}</p>
                             <ChevronDown className={`transition-transform text-base-1 ${activeCategory === category.title ? "rotate-180 text-secondary" : ""}`} />
@@ -56,7 +60,7 @@ export default function Sidebar({ categories, menuOpen, activeCategory, setActiv
                 <WhatsappIcon className="w-6 h-6 fill-[#25D366]" />
             </ul>
 
-            <div className='w-[80%] h-px bg-secondary/30 mx-auto'></div>
+            <div className='w-[80%] h-px bg-secondary/30 mx-auto mb-10'></div>
 
         </div>
     );
