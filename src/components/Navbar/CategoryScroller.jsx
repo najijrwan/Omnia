@@ -11,13 +11,13 @@ export default function CategoryScroller({ categories, onHoverCategory, activeCa
     };
 
     return (
-        <header className="">
-            <button onClick={() => scroll('left')} className="absolute left-0 top-1/2 -translate-y-1/2 bg-gradient-to-r from-white to-transparent px-2 h-full">
-                <svg className="w-6 h-6 text-secondary" fill="none" stroke="currentColor" strokeWidth="3"><path d="M15 18l-6-6 6-6" /></svg>
+        <header className="px-2 bg-black/20">
+            <button onClick={() => scroll('left')} className="absolute left-0 top-1/2 -translate-y-1/2 h-fit p-2 bg-base-1/20 hover:bg-base-1/15 active:scale-90 transition-all duration-200 ease-in-out shadow-[0_0_3px_rgba(0,0,0,0.2)] cursor-pointer">
+                <svg className="size-6 text-base-1 drop-shadow-[0_0_3px_rgba(255,255,255,0.5)]" fill="none" stroke="currentColor" strokeWidth="3"><path d="M15 18l-6-6 6-6" /></svg>
             </button>
 
-            <button onClick={() => scroll('right')} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gradient-to-l from-base-1 to-transparent px-2 h-full">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="3"><path d="M9 18l6-6-6-6" /></svg>
+            <button onClick={() => scroll('right')} className="absolute right-0 top-1/2 -translate-y-1/2 px-2 h-full cursor-pointer">
+                <svg className="size-6 text-base-1 drop-shadow-[0_0_3px_rgba(255,255,255,0.5)]" fill="none" stroke="currentColor" strokeWidth="3"><path d="M9 18l6-6-6-6" /></svg>
             </button>
 
             <nav ref={scrollRef} className="flex overflow-x-auto whitespace-nowrap hide-scrollbar scroll-smooth mx-9">
@@ -26,9 +26,9 @@ export default function CategoryScroller({ categories, onHoverCategory, activeCa
                         key={category.title}
                         onMouseEnter={() => onHoverCategory(category.title)}
                         onMouseLeave={() => onHoverCategory(null)}
-                        className={`text-sm font-bold border-b-[4px] cursor-pointer transition py-2 px-4
-    ${activeCategory === category.title ? 'text-base-1 border-b-base-1' : 'text-secondary border-transparent hover:text-base-1 hover:border-b-base-1'}
-  `}
+                        className={`
+                            text-sm text-center font-bold cursor-pointer transition py-2 px-4 
+                            ${activeCategory === category.title ? 'text-base-1' : 'text-white'}`}
                     >
                         {category.title}
                     </button>

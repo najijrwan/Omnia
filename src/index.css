@@ -6,15 +6,18 @@ body {
 }
 
 @theme {
-  --color-main: #FFFFFF;
+  --color-white: #D1D1D1;
+  --color-main: #343330;
   --color-secondary: #343330;
-  --color-base-1: #F87060;
+  --color-base-1: #D1D1D1;
+  --color-items: #D1D1D120;
   --color-base-2: #AA8F76;
   --color-cards: #F8706010;
   --color-cards-2: #F8706030;
-  --color-sections: #AA8F7630;
-  --color-classic: #00000010;
+  --color-sections: #303030;
+  --color-classic: #FFFFFF10;
 
+  --breakpoint-xs: 400px;
   --breakpoint-sm: 580px;
   --breakpoint-2xl: 1700px;
 

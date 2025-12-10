@@ -11,14 +11,14 @@ export default function Sidebar({ categories, menuOpen, setMenuOpen, activeCateg
 
     return (
         <div className={`fixed top-0 right-0 h-full w-[70vw] bg-main transition-all duration-300 ease-in-out z-30 overflow-y-scroll ${menuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-            <header className='flex items-center p-3 pr-2 h-[65px]'>
-                <button className='mr-auto' onClick={() => setMenuOpen(false)}>
+            <header className='flex items-center justify-start flex-row-reverse gap-5 p-3 pr-2 h-[65px]'>
+                <button className='' onClick={() => setMenuOpen(false)}>
                     <X className='text-base-1 size-7' />
                 </button>
-                <ul className='flex md:hidden gap-3 flex-row text-base-1'>
-                    <li><Bookmark className='inline size-7' /></li>
-                    <li><ShoppingCart className='inline size-7' /></li>
-                    <li><CircleUserRound className='inline size-7' /></li>
+                <ul className='flex gap-1 py-1.5 px-2 text-base-1 font-extrabold bg-base-1/20 border border-base-1/60 rounded-[16px] shadow-2xl'>
+                    <li><button className="py-1 px-2 rounded-[10px] hover:bg-base-1/20 cursor-pointer transition-all ease-in-out duration-150"><Bookmark className='inline size-6' /></button></li>
+                    <li><button className="py-1 px-2 rounded-[10px] hover:bg-base-1/20 cursor-pointer transition-all ease-in-out duration-150"><ShoppingCart className='inline size-6' /></button></li>
+                    <li><button className="py-1 px-2 rounded-[10px] hover:bg-base-1/20 cursor-pointer transition-all ease-in-out duration-150"><CircleUserRound className='inline size-6' /></button></li>
                 </ul>
             </header>
 

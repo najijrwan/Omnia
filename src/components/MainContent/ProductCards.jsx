@@ -3,7 +3,10 @@ import { ShoppingCart, Heart } from "lucide-react";
 export function ProductCardRounded({ product }) {
     return (
         <div className="relative group cursor-pointer text-center mt-6">
-            <div className="relative flex items-center justify-center size-25 z-10 bg-cards border border-classic rounded-full transition-transform duration-500 ease-in-out">
+            <div className="relative flex items-center justify-center size-25 z-10 bg-base-1/10
+    border border-white/10 backdrop-blur-md
+    shadow-[0_4px_12px_rgba(0,0,0,0.4)]
+ rounded-full transition-transform duration-500 ease-in-out">
                 <img
                     src={product.image}
                     alt={product.name}
@@ -11,7 +14,7 @@ export function ProductCardRounded({ product }) {
                 />
             </div>
 
-            <h3 className="mt-3 font-semibold text-base-1 tracking-wide drop-shadow-sm text-[12px]">
+            <h3 className="mt-3 font-semibold text-[#E5E5E5] tracking-wide drop-shadow-sm text-[12px]">
                 {product.name}
             </h3>
         </div>

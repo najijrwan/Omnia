@@ -1,6 +1,6 @@
 export default function PromotionBanner() {
     return (
-        <section className="bg-base-1 py-6 px-4 text-center rounded-lg shadow-md mx-4">
+        <section className="bg-sections py-6 px-4 text-center rounded-lg shadow-md mx-4">
             <h2 className="text-2xl text-yellow-300 font-bold mb-2">
                 🎉 Summer Sale: Up to 50% Off!
             </h2>
