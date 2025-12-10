@@ -2,7 +2,7 @@ import { Search } from 'lucide-react';
 export default function SearchBar() {
     return (
         <div className="
-            hidden relative gap-3 w-[140px] h-[40px] md:max-w-[400px] mx-auto xl:mx-0 xl:w-[178px]
+            hidden 2xl:flex relative gap-3 w-[140px] h-[40px] md:max-w-[400px] mx-auto xl:mx-0 xl:w-[178px]
             rounded-full backdrop-blur-md bg-secondary/40 border border-base-1/20
             shadow-[0_4px_20px_rgba(0,0,0,0.3)] transition-all duration-200
             hover:bg-base-1/5"
