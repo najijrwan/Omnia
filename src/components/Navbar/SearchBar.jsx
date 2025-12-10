@@ -7,7 +7,7 @@ export default function SearchBar() {
             shadow-[0_4px_20px_rgba(0,0,0,0.3)] transition-all duration-200
             hover:bg-base-1/5"
         >
-            <button className='h-full bg-secondary/10 text-base-1/80 px-2 rounded-full active:scale-90 transition-all duration-200 ease-in-out shadow-[0_0_3px_rgba(255,255,255,0.2)] cursor-pointer'>
+            <button className='h-full bg-secondary/10 hover:bg-secondary/30 text-base-1/80 px-2 rounded-full active:scale-90 transition-all duration-200 ease-in-out shadow-[0_0_3px_rgba(255,255,255,0.2)] cursor-pointer'>
                 <Search
                     className="size-6 rounded-[inherit] drop-shadow-[0_0_3px_rgba(255,255,255,0.5)]"
                     strokeWidth={2}
@@ -20,7 +20,7 @@ export default function SearchBar() {
                 className="
                     size-full
                     bg-transparent text-base-1/90 placeholder-base-1/60
-                    focus:outline-none focus:placeholder-transparent transition-all duration-200 ease-in-out"
+                    hover:bg-base-1/5 focus:outline-none focus:placeholder-transparent transition-all duration-200 ease-in-out"
             />
         </div>
 
