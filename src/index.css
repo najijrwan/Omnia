@@ -17,7 +17,7 @@ body {
   --color-sections: #303030;
   --color-classic: #FFFFFF10;
 
-  --breakpoint-xs: 400px;
+  --breakpoint-xs: 375px;
   --breakpoint-sm: 580px;
   --breakpoint-2xl: 1700px;
 
